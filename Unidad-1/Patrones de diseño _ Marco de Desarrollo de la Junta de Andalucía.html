@@ -1,0 +1,565 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0069)https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/13 -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es" dir="ltr" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Patrones de diseño | Marco de Desarrollo de la Junta de Andalucía</title>
+  <link rel="up" href="https://www.juntadeandalucia.es/servicios/madeja/contenido/subsistemas/desarrollo/patrones-diseno">
+<link rel="next" href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/181">
+<link rel="shortcut icon" href="https://www.juntadeandalucia.es/servicios/madeja/sites/all/themes/madeja/favicon.ico" type="image/x-icon">
+  <link type="text/css" rel="stylesheet" media="all" href="./Patrones de diseño _ Marco de Desarrollo de la Junta de Andalucía_files/css_02248c5b2381c3b0053e89b12d991491.css">
+<link type="text/css" rel="stylesheet" media="print" href="./Patrones de diseño _ Marco de Desarrollo de la Junta de Andalucía_files/css_60a4a9730af3934338b74c250b666a2c.css">
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="https://www.juntadeandalucia.es/servicios/madeja/sites/all/themes/madeja/css/ie.css?r" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="https://www.juntadeandalucia.es/servicios/madeja/sites/all/themes/madeja/css/ie6.css?r" />
+<![endif]-->
+  <script type="text/javascript" async="" src="./Patrones de diseño _ Marco de Desarrollo de la Junta de Andalucía_files/analytics.js.descargar"></script><script type="text/javascript" async="" src="./Patrones de diseño _ Marco de Desarrollo de la Junta de Andalucía_files/js"></script><script type="text/javascript" async="" defer="" src="./Patrones de diseño _ Marco de Desarrollo de la Junta de Andalucía_files/piwik.js.descargar"></script><script type="text/javascript" src="./Patrones de diseño _ Marco de Desarrollo de la Junta de Andalucía_files/js_a490a085d07a54acc0e0c0872157df7a.js.descargar"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/servicios/madeja/", "jcarousel": { "ajaxPath": "/servicios/madeja/jcarousel/ajax/views" }, "lightbox2": { "rtl": "0", "file_path": "/servicios/madeja/(\\w\\w/)sites/default/files", "default_image": "/servicios/madeja/sites/all/modules/contrib/lightbox2/images/brokenimage.jpg", "border_size": 10, "font_color": "000", "box_color": "fff", "top_position": "", "overlay_opacity": "0.8", "overlay_color": "000", "disable_close_click": true, "resize_sequence": 0, "resize_speed": 400, "fade_in_speed": 400, "slide_down_speed": 600, "use_alt_layout": false, "disable_resize": false, "disable_zoom": false, "force_show_nav": false, "show_caption": true, "loop_items": false, "node_link_text": "View Image Details", "node_link_target": false, "image_count": "Image !current of !total", "video_count": "Video !current of !total", "page_count": "Page !current of !total", "lite_press_x_close": "press \x3ca href=\"#\" onclick=\"hideLightbox(); return FALSE;\"\x3e\x3ckbd\x3ex\x3c/kbd\x3e\x3c/a\x3e to close", "download_link_text": "", "enable_login": false, "enable_contact": false, "keys_close": "c x 27", "keys_previous": "p 37", "keys_next": "n 39", "keys_zoom": "z", "keys_play_pause": "32", "display_image_size": "original", "image_node_sizes": "()", "trigger_lightbox_classes": "", "trigger_lightbox_group_classes": "", "trigger_slideshow_classes": "", "trigger_lightframe_classes": "", "trigger_lightframe_group_classes": "", "custom_class_handler": 0, "custom_trigger_classes": "", "disable_for_gallery_lists": true, "disable_for_acidfree_gallery_lists": true, "enable_acidfree_videos": true, "slideshow_interval": 5000, "slideshow_automatic_start": true, "slideshow_automatic_exit": true, "show_play_pause": true, "pause_on_next_click": false, "pause_on_previous_click": true, "loop_slides": false, "iframe_width": 600, "iframe_height": 400, "iframe_border": 1, "enable_video": false }, "nice_menus_options": { "delay": "200", "speed": "fast" }, "prettify": { "linenums": false, "match": ".content", "nocode": "no-code", "custom": [  ], "markup": { "code": true, "pre": true, "precode": false } }, "extlink": { "extTarget": "_blank", "extClass": "ext", "extSubdomains": 1, "extExclude": "", "extInclude": "", "extAlert": 0, "extAlertText": "This link will take you to an external web site. We are not responsible for their content.", "mailtoClass": "mailto" }, "environment_indicator": { "suppress": 1 }, "tabs": { "slide": false, "fade": false, "speed": "fast", "auto_height": false, "next_text": "next", "previous_text": "previous", "navigation_titles": false }, "og": { "group_context": { "nid": "19", "title": "DES_Desarrollo", "type": "group" } } });
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var text_resize_scope = "content-inner";
+    var text_resize_minimum = "11";
+    var text_resize_maximum = "12";
+    var text_resize_line_height_allow = 1;
+    var text_resize_line_height_min = "18";
+    var text_resize_line_height_max = "20";
+//--><!]]>
+</script>
+<meta http-equiv="origin-trial" content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"></head>
+<body class="page not-front not-logged-in node-type-recurso og-context og-context-19 page-contenido-recurso-13 section-contenido one-sidebar sidebar-first lightbox-processed">
+
+      <div id="skip-link"><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/13#main-menu">Jump to Navigation</a></div>
+  
+  <div id="page-wrapper"><div id="page">
+
+    <div id="header"><div class="section clearfix">
+
+      
+      <div id="logo-junta-link">
+        <a href="http://www.juntadeandalucia.es/" title="Enlace a la portada de la Web oficial de la Junta de Andalucía">
+          <span>Enlace a la portada de la Web oficial de la Junta de Andalucía</span>
+        </a>
+      </div>
+
+              <div id="name-and-slogan">
+                                    <div id="site-name"><strong>
+                <a href="https://www.juntadeandalucia.es/servicios/madeja/" title="Home" rel="home"><span>Marco de Desarrollo de la Junta de Andalucía</span></a>
+              </strong></div>
+                      
+                  </div> <!-- /#name-and-slogan -->
+      
+              <ul id="secondary-menu" class="links clearfix"><li class="menu-8688 first"><a href="https://www.juntadeandalucia.es/servicios/madeja/sitemap" title="">Mapa web</a></li>
+<li class="menu-10885"><a href="https://www.juntadeandalucia.es/servicios/madeja/blog" title="Blog del Portal MADEJA">Blog</a></li>
+<li class="menu-10884"><a href="https://www.juntadeandalucia.es/servicios/madeja/contact" title="">Contacto</a></li>
+<li class="menu-400 last"><a href="https://www.juntadeandalucia.es/servicios/madeja/user/login?destination=node%2F414" title="">Iniciar sesión</a></li>
+</ul>      
+              <div id="search-box"><form action="https://www.juntadeandalucia.es/servicios/madeja/search/apachesolr_search" accept-charset="UTF-8" method="post" id="search-theme-form">
+<div><div id="search" class="container-inline">
+  <div class="form-item" id="edit-search-theme-form-1-wrapper">
+ <label for="edit-search-theme-form-1">Search this site: </label>
+ <input type="text" maxlength="128" name="search_theme_form" id="edit-search-theme-form-1" size="15" value="" title="Enter the terms you wish to search for." class="form-text">
+</div>
+<input type="submit" name="op" id="edit-submit" value="Search" class="form-submit">
+<input type="hidden" name="form_build_id" id="form-812615c98389fd2c04d1c394d6f3063e" value="form-812615c98389fd2c04d1c394d6f3063e">
+<input type="hidden" name="form_id" id="edit-search-theme-form" value="search_theme_form">
+</div>
+
+</div></form>
+</div>
+      
+      
+      <div class="region region-header">
+  <div id="block-text_resize-0" class="block block-text_resize first last region-odd odd region-count-1 count-3">
+  
+  <div class="content">
+    <a href="javascript:;" class="changer" id="text_resize_decrease"><sup>-</sup>A</a> <a href="javascript:;" class="changer" id="text_resize_increase"><sup>+</sup>A</a><div id="text_resize_clear"></div>  </div>
+
+  </div><!-- /.block -->
+</div><!-- /.region -->
+
+    </div></div> <!-- /.section, /#header -->
+
+    <div id="main-wrapper"><div id="main" class="clearfix with-navigation">
+
+      <div id="content" class="column"><div id="content-inner" class="section">
+
+        
+        
+                <div class="breadcrumb-box">
+          <div class="breadcrumb-text"><span>Se encuentra en: </span></div><div class="breadcrumb"><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido" title="Marco de Desarrollo de la Junta de Andalucía (MADEJA)">MADEJA</a> » <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/subsistemas" title="Subsistemas">Subsistemas</a> » <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/subsistemas/desarrollo">Desarrollo</a> » <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/subsistemas/desarrollo/patrones-diseno">Patrones de Diseño</a> » </div>        </div>
+        
+                  <h1 class="title">
+            Patrones de diseño          </h1>
+                                
+        
+        <div id="content-area">
+          <div id="node-414" class="node node-type-recurso build-mode-full">
+  
+  
+  
+      <div class="meta clearfix clearfix-ie">
+      
+              <div class="type-code"><span class="code">RECU-0013</span> <span class="type">(Recurso Ficha)</span></div>
+      
+          </div>
+  
+  <div class="content">
+    <div class="madeja-taxonomy"><div class="item-list"><ul><li class="first"><span class="madeja-vocabulary-label">Área: </span><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/subsistemas/desarrollo/patrones-diseno">Patrones de Diseño</a></li>
+<li class="last"><span class="madeja-vocabulary-label">Carácter del recurso: </span><a href="https://www.juntadeandalucia.es/servicios/madeja/consultas/recursos?agrupaciones-caracter=8">Recomendado</a></li>
+</ul></div></div><div class="fieldgroup group-rec-fic">
+
+  
+  <div class="content"><div class="field field-type-text field-field-rec-fic-cuerpo">
+      <h2 class="field-label">Descripción</h2>
+    <div class="field-items">
+            <div class="field-item odd">
+                     <p>Por definición, un patrón de diseño es una solución a un problema de diseño cuya efectividad ha sido comprobada por haber sido empleada para resolver problemas similares en ocasiones anteriores. Otra característica fundamental es que deben ser reusables, lo que significa que sean aplicables a diferentes problemas de diseño en distintas circunstancias. Los patrones de diseño pretenden:</p><ul><li>Proporcionar catálogos de elementos reusables en el diseño de sistemas software.</li><li>Evitar la reiteración en la búsqueda de soluciones a problemas ya conocidos y solucionados anteriormente.</li><li>Formalizar un vocabulario común entre diseñadores.</li><li>Estandarizar el modo en que se realiza el diseño. Facilitar el aprendizaje de las nuevas generaciones de diseñadores condensando conocimiento ya existente.</li></ul><p>Según su enfoque los patrones de diseño se agrupan en:</p><ul><li><strong>Patrones de creación</strong> (o creacionales). Definen cómo puede crearse un objeto. Habitualmente esto incluye aislar los detalles de la creación del objeto, de forma que su código no dependa de los tipos de objeto que hay y, por lo tanto, no deba se modificado al añadir un nuevo tipo de objeto.</li><li><strong>Patrones estructurales</strong> Tratan la manera en que los objetos se conectan con otros objetos, para asegurar que los cambios del sistema no requieren cambiar esas conexiones.</li><li><strong>Patrones de comportamiento </strong>Tratan a los objetos que manejan tipos particulares de acciones dentro de un programa. Éstos encapsulan procesos debe ejecutarse dentro de la funcionalidad de la aplicación, como interpretar un lenguaje, completar una petición, moverse a través de una secuencia o implementar un algoritmo.</li></ul><p>Para describir un patrón se utilizan plantillas más o menos estandarizadas, de forma que sus características se expresen uniformemente y puedan constituir efectivamente un medio de comunicación uniforme entre diseñadores. Varios autores eminentes en esta área han propuesto plantillas ligeramente distintas, aunque la mayoría de estas plantillas definen los mismos conceptos básicos. La plantilla más común consta de los siguientes apartados:</p><ul><li><strong>Nombre del patrón:</strong> nombre estándar del patrón por el cual será reconocido en la comunidad (normalmente se expresan en inglés). Otros nombres de uso común para el patrón.</li><li><strong>Clasificación del patrón:</strong> creacional, estructural o de comportamiento.</li><li><strong>Motivación:</strong> Escenario de ejemplo para la aplicación del patrón.</li><li><strong>Aplicabilidad:</strong> Usos comunes y criterios de aplicabilidad del patrón.</li><li><strong>Estructura:</strong> Diagramas de clases oportunos para describir las clases que intervienen en el patrón.</li><li><strong>Participantes:</strong> Enumeración y descripción de las entidades abstractas (y sus roles) que participan en el patrón.</li><li><strong>Colaboraciones:</strong> Explicación de las interrelaciones que se dan entre los participantes.</li><li><strong>Consecuencias:</strong> Consecuencias positivas y negativas en el diseño derivadas de la aplicación del patrón.</li><li><strong>Implementación:</strong> Técnicas o comentarios oportunos de cara a la implementación del patrón.</li><li><strong>Código de ejemplo:</strong> Código fuente ejemplo de implementación del patrón.</li><li><strong>Usos conocidos:</strong> Ejemplos de sistemas reales que usan el patrón.</li><li><strong>Patrones relacionados:</strong> Referencias cruzadas con otros patrones.&nbsp;</li></ul>         </div>
+        </div>
+</div>
+</div>
+
+</div>
+<div class="clearfix clearfix-ie"></div><div id="tabs-tabset" class="drupal-tabs js-hide ui-tabs ui-widget ui-widget-content ui-corner-all tabs-processed" style="display: block;"><div class="field"><h2 class="field-label">Contenidos relacionados</h2></div><ul class="clear-block ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all tabs primary"><li class="tabset-tab-5 ui-state-default ui-corner-top ui-tabs-selected ui-state-active active first last"><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/13#tabset-tab-5"><span class="tab">Recursos</span></a></li></ul><span class="clear"></span><div id="tabset-tab-5" class="tabs-tabset ui-tabs-panel ui-widget-content ui-corner-bottom"><span class="drupal-tabs-title js-hide">Recursos</span><div class="field field-type-nodereference field-field-rec-relacionados">
+    <div class="field-items">
+            <div class="field-item odd">
+                    <div class="views_view view view-field-rec-relacionados view-id-field_rec_relacionados view-display-id-default view-dom-id-1">
+  
+  
+  
+  
+      <div class="view-content">
+      <table class="views-table cols-4">
+      <caption>Área: <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/subsistemas/desarrollo">Desarrollo</a> » <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/subsistemas/desarrollo/patrones-diseno">Patrones de Diseño</a></caption>
+    <thead>
+    <tr>
+              <th class="views-field views-field-field-codigo-value">
+          Código        </th>
+              <th class="views-field views-field-title">
+          Título        </th>
+              <th class="views-field views-field-field-rec-tipo-value">
+          Tipo        </th>
+              <th class="views-field views-field-tid">
+          Carácter        </th>
+          </tr>
+  </thead>
+  <tbody>
+          <tr class="odd views-row-first">
+                  <td class="views-field views-field-field-codigo-value">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/181">RECU-0181</a>          </td>
+                  <td class="views-field views-field-title">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/181">Adaptador</a>          </td>
+                  <td class="views-field views-field-field-rec-tipo-value">
+            Patrón          </td>
+                  <td class="views-field views-field-tid">
+            <span class="caracter gris">Recomendado</span>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-codigo-value">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/182">RECU-0182</a>          </td>
+                  <td class="views-field views-field-title">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/182">Cadena de Responsabilidades</a>          </td>
+                  <td class="views-field views-field-field-rec-tipo-value">
+            Patrón          </td>
+                  <td class="views-field views-field-tid">
+            <span class="caracter gris">Recomendado</span>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-codigo-value">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/183">RECU-0183</a>          </td>
+                  <td class="views-field views-field-title">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/183">Comando</a>          </td>
+                  <td class="views-field views-field-field-rec-tipo-value">
+            Patrón          </td>
+                  <td class="views-field views-field-tid">
+            <span class="caracter gris">Recomendado</span>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-codigo-value">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/184">RECU-0184</a>          </td>
+                  <td class="views-field views-field-title">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/184">Composite</a>          </td>
+                  <td class="views-field views-field-field-rec-tipo-value">
+            Patrón          </td>
+                  <td class="views-field views-field-tid">
+            <span class="caracter gris">Recomendado</span>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-codigo-value">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/185">RECU-0185</a>          </td>
+                  <td class="views-field views-field-title">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/185">Constructor</a>          </td>
+                  <td class="views-field views-field-field-rec-tipo-value">
+            Patrón          </td>
+                  <td class="views-field views-field-tid">
+            <span class="caracter gris">Recomendado</span>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-codigo-value">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/186">RECU-0186</a>          </td>
+                  <td class="views-field views-field-title">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/186">Decorador</a>          </td>
+                  <td class="views-field views-field-field-rec-tipo-value">
+            Patrón          </td>
+                  <td class="views-field views-field-tid">
+            <span class="caracter gris">Recomendado</span>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-codigo-value">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/187">RECU-0187</a>          </td>
+                  <td class="views-field views-field-title">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/187">Estado</a>          </td>
+                  <td class="views-field views-field-field-rec-tipo-value">
+            Patrón          </td>
+                  <td class="views-field views-field-tid">
+            <span class="caracter gris">Recomendado</span>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-codigo-value">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/188">RECU-0188</a>          </td>
+                  <td class="views-field views-field-title">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/188">Estrategia</a>          </td>
+                  <td class="views-field views-field-field-rec-tipo-value">
+            Patrón          </td>
+                  <td class="views-field views-field-tid">
+            <span class="caracter gris">Recomendado</span>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-codigo-value">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/189">RECU-0189</a>          </td>
+                  <td class="views-field views-field-title">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/189">Fachada</a>          </td>
+                  <td class="views-field views-field-field-rec-tipo-value">
+            Patrón          </td>
+                  <td class="views-field views-field-tid">
+            <span class="caracter gris">Recomendado</span>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-codigo-value">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/190">RECU-0190</a>          </td>
+                  <td class="views-field views-field-title">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/190">Factoría</a>          </td>
+                  <td class="views-field views-field-field-rec-tipo-value">
+            Patrón          </td>
+                  <td class="views-field views-field-tid">
+            <span class="caracter gris">Recomendado</span>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-codigo-value">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/191">RECU-0191</a>          </td>
+                  <td class="views-field views-field-title">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/191">Factoría Abstracta</a>          </td>
+                  <td class="views-field views-field-field-rec-tipo-value">
+            Patrón          </td>
+                  <td class="views-field views-field-tid">
+            <span class="caracter gris">Recomendado</span>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-codigo-value">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/192">RECU-0192</a>          </td>
+                  <td class="views-field views-field-title">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/192">Intérprete</a>          </td>
+                  <td class="views-field views-field-field-rec-tipo-value">
+            Patrón          </td>
+                  <td class="views-field views-field-tid">
+            <span class="caracter gris">Recomendado</span>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-codigo-value">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/193">RECU-0193</a>          </td>
+                  <td class="views-field views-field-title">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/193">Iterador</a>          </td>
+                  <td class="views-field views-field-field-rec-tipo-value">
+            Patrón          </td>
+                  <td class="views-field views-field-tid">
+            <span class="caracter gris">Recomendado</span>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-codigo-value">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/194">RECU-0194</a>          </td>
+                  <td class="views-field views-field-title">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/194">Mediador</a>          </td>
+                  <td class="views-field views-field-field-rec-tipo-value">
+            Patrón          </td>
+                  <td class="views-field views-field-tid">
+            <span class="caracter gris">Recomendado</span>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-codigo-value">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/195">RECU-0195</a>          </td>
+                  <td class="views-field views-field-title">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/195">Memento</a>          </td>
+                  <td class="views-field views-field-field-rec-tipo-value">
+            Patrón          </td>
+                  <td class="views-field views-field-tid">
+            <span class="caracter gris">Recomendado</span>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-codigo-value">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/196">RECU-0196</a>          </td>
+                  <td class="views-field views-field-title">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/196">Observador</a>          </td>
+                  <td class="views-field views-field-field-rec-tipo-value">
+            Patrón          </td>
+                  <td class="views-field views-field-tid">
+            <span class="caracter gris">Recomendado</span>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-codigo-value">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/197">RECU-0197</a>          </td>
+                  <td class="views-field views-field-title">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/197">Peso Ligero</a>          </td>
+                  <td class="views-field views-field-field-rec-tipo-value">
+            Patrón          </td>
+                  <td class="views-field views-field-tid">
+            <span class="caracter gris">Recomendado</span>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-codigo-value">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/198">RECU-0198</a>          </td>
+                  <td class="views-field views-field-title">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/198">Plantilla</a>          </td>
+                  <td class="views-field views-field-field-rec-tipo-value">
+            Patrón          </td>
+                  <td class="views-field views-field-tid">
+            <span class="caracter gris">Recomendado</span>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-codigo-value">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/199">RECU-0199</a>          </td>
+                  <td class="views-field views-field-title">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/199">Prototipo</a>          </td>
+                  <td class="views-field views-field-field-rec-tipo-value">
+            Patrón          </td>
+                  <td class="views-field views-field-tid">
+            <span class="caracter gris">Recomendado</span>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-codigo-value">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/200">RECU-0200</a>          </td>
+                  <td class="views-field views-field-title">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/200">Proxy</a>          </td>
+                  <td class="views-field views-field-field-rec-tipo-value">
+            Patrón          </td>
+                  <td class="views-field views-field-tid">
+            <span class="caracter gris">Recomendado</span>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-codigo-value">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/201">RECU-0201</a>          </td>
+                  <td class="views-field views-field-title">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/201">Puente</a>          </td>
+                  <td class="views-field views-field-field-rec-tipo-value">
+            Patrón          </td>
+                  <td class="views-field views-field-tid">
+            <span class="caracter gris">Recomendado</span>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-codigo-value">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/202">RECU-0202</a>          </td>
+                  <td class="views-field views-field-title">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/202">Singleton</a>          </td>
+                  <td class="views-field views-field-field-rec-tipo-value">
+            Patrón          </td>
+                  <td class="views-field views-field-tid">
+            <span class="caracter gris">Recomendado</span>          </td>
+              </tr>
+          <tr class="odd views-row-last">
+                  <td class="views-field views-field-field-codigo-value">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/203">RECU-0203</a>          </td>
+                  <td class="views-field views-field-title">
+            <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/203">Visitor</a>          </td>
+                  <td class="views-field views-field-field-rec-tipo-value">
+            Patrón          </td>
+                  <td class="views-field views-field-tid">
+            <span class="caracter gris">Recomendado</span>          </td>
+              </tr>
+      </tbody>
+</table>
+    </div>
+  
+  
+  
+  
+  
+  
+</div><!-- /.view -->
+        </div>
+        </div>
+</div>
+</div></div>  <div class="area-navigation">
+        <div class="page-links clear-block">
+              <span class="page-previous">&nbsp;</span>
+                    <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/subsistemas/desarrollo/patrones-diseno" class="page-up" title="Ir al área padre">subir nivel</a>
+                    <a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/181" class="page-next" title="Ir al contenido siguiente">Adaptador ›</a>
+          </div>
+      </div>
+  </div>
+
+  </div> <!-- /.node -->
+        </div>
+
+        
+        
+      </div></div> <!-- /.section, /#content -->
+
+              <div id="navigation"><div class="section clearfix">
+
+                      <h2 class="element-invisible">Main menu</h2>
+            <ul class="nice-menu nice-menu-down sf-js-enabled" id="nice-menu-0"><li class="menu-404 menu-path-front first  odd "><a href="https://www.juntadeandalucia.es/servicios/madeja/" title="">Inicio</a></li>
+<li class="menu-1538 menuparent menu-path-node-1 active-trail even "><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido" title="Marco de Desarrollo de la Junta de Andalucía (MADEJA)">MADEJA</a><ul style="display: none; visibility: hidden;"><li class="menu-1544 menu-path-node-7 first  odd "><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/definicion" title="Definición">Definición</a></li>
+<li class="menu-1545 menu-path-node-8 even "><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/objetivos" title="Objetivos">Objetivos</a></li>
+<li class="menu-1581 menuparent menu-path-node-9 active-trail odd "><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/subsistemas" title="Subsistemas">Subsistemas</a><ul style="display: none; visibility: hidden;"><li class="menu-1582 menu-path-node-10 first  odd "><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/subsistemas/arquitectura" title="Arquitectura">Arquitectura</a></li>
+<li class="menu-1583 menu-path-node-11 even "><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/subsistemas/catalogo" title="Catálogo">Catálogo</a></li>
+<li class="menu-1584 menu-path-node-12 active-trail odd "><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/subsistemas/desarrollo" title="Desarrollo">Desarrollo</a></li>
+<li class="menu-1585 menu-path-node-13 even "><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/subsistemas/interfaz-usuario" title="Interfaz de usuario">Interfaz de usuario</a></li>
+<li class="menu-1591 menu-path-node-14 odd "><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/subsistemas/entorno" title="Entorno">Entorno</a></li>
+<li class="menu-1593 menu-path-node-15 even "><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/subsistemas/ingenieria" title="Ingeniería">Ingeniería</a></li>
+<li class="menu-1595 menu-path-node-16 odd  last "><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/subsistemas/verificacion" title="Verificación">Verificación</a></li>
+</ul>
+</li>
+<li class="menu-10905 menu-path-node-1679 even  last "><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/procesos" title="PROCESOS">Procesos</a></li>
+</ul>
+</li>
+<li class="menu-1539 menuparent menu-path-node-2 odd "><a href="https://www.juntadeandalucia.es/servicios/madeja/consultas" title="Búsquedas y consultas">Búsquedas y consultas</a><ul style="display: none; visibility: hidden;"><li class="menu-8697 menu-path-consultas-pautas first  odd "><a href="https://www.juntadeandalucia.es/servicios/madeja/consultas/pautas" title="Muestra la tabla de Pautas">Tabla de Pautas</a></li>
+<li class="menu-8692 menu-path-consultas-procedimientos even "><a href="https://www.juntadeandalucia.es/servicios/madeja/consultas/procedimientos" title="Muestra la tabla de Procedimientos">Tabla de Procedimientos</a></li>
+<li class="menu-8689 menu-path-consultas-recursos odd "><a href="https://www.juntadeandalucia.es/servicios/madeja/consultas/recursos" title="Muestra la tabla de Recursos">Tabla de Recursos</a></li>
+<li class="menu-8698 menu-path-consultas-perfiles even "><a href="https://www.juntadeandalucia.es/servicios/madeja/consultas/perfiles" title="Canales temáticos por perfiles">Perfiles</a></li>
+<li class="menu-8696 menu-path-consultas-fases odd "><a href="https://www.juntadeandalucia.es/servicios/madeja/consultas/fases" title="Canales temáticos por fases del ciclo de vida">Fases del ciclo de vida</a></li>
+<li class="menu-8690 menu-path-consultas-tecnologias even  last "><a href="https://www.juntadeandalucia.es/servicios/madeja/consultas/tecnologias" title="Contenidos por Tecnologías">Tecnologías</a></li>
+</ul>
+</li>
+<li class="menu-1540 menuparent menu-path-node-3 even "><a href="https://www.juntadeandalucia.es/servicios/madeja/ayuda" title="Ayuda y Soporte">Ayuda y Soporte</a><ul style="display: none; visibility: hidden;"><li class="menu-9129 menuparent menu-path-node-1276 first odd "><a href="https://www.juntadeandalucia.es/servicios/madeja/ayuda/guia-lector" title="Guía de Uso para el Lector">Guía Lector</a><ul style="display: none; visibility: hidden;"><li class="menu-9130 menu-path-node-1277 first  odd  last "><a href="https://www.juntadeandalucia.es/servicios/madeja/ayuda/guia-lector/que-me-ofrece" title="¿Qué me ofrece?">¿Qué me ofrece?</a></li>
+</ul>
+</li>
+<li class="menu-9139 menuparent menu-path-node-1278 even "><a href="https://www.juntadeandalucia.es/servicios/madeja/ayuda/guia-redactor" title="Guía de Uso para el Contribuyente o Redactor de contenidos">Guía Redactor</a><ul style="display: none; visibility: hidden;"><li class="menu-9366 menu-path-node-1321 first  odd  last "><a href="https://www.juntadeandalucia.es/servicios/madeja/ayuda/guia-lector/tipos-de-recursos" title="Tipos de Recursos">Tipos de Recursos</a></li>
+</ul>
+</li>
+<li class="menu-9140 menu-path-node-1279 odd "><a href="https://www.juntadeandalucia.es/servicios/madeja/ayuda/guia-validador" title="Guía de Uso para el Validador de Contenidos">Guía Validador</a></li>
+<li class="menu-9213 menu-path-faq even "><a href="https://www.juntadeandalucia.es/servicios/madeja/faq" title="">FAQs</a></li>
+<li class="menu-9174 menu-path-glossary odd "><a href="https://www.juntadeandalucia.es/servicios/madeja/glossary" title="">Glosario</a></li>
+<li class="menu-9215 menu-path-node-1282 even  last "></li>
+</ul>
+</li>
+<li class="menu-1541 menuparent menu-path-node-4 odd last "><ul style="display: none; visibility: hidden;"><li class="menu-10887 menu-path-forum first  odd "><a href="https://www.juntadeandalucia.es/servicios/madeja/forum" title="">Forums</a></li>
+<li class="menu-10889 menu-path-blog even  last "><a href="https://www.juntadeandalucia.es/servicios/madeja/blog" title="Acceder al blog del Portal MADEJA.">Blog</a></li>
+</ul>
+</li>
+</ul>
+          
+          
+        </div></div> <!-- /.section, /#navigation -->
+      
+      <div class="region region-sidebar-first column sidebar"><div class="section">
+  <div id="block-menu_block-1" class="block block-menu_block first region-odd odd region-count-1 count-1">
+  
+  <div class="content">
+    <div class="menu_block_wrapper menu-block-1 menu-name-primary-links parent-mlid-1538 menu-level-1">
+  <ul class="menu"><li class="leaf first menu-mlid-1544"><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/definicion" title="Definición">Definición</a></li>
+<li class="leaf menu-mlid-1545"><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/objetivos" title="Objetivos">Objetivos</a></li>
+<li class="expanded menu-mlid-1581 active-trail"><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/subsistemas" title="Subsistemas" class="active-trail">Subsistemas</a><ul class="menu"><li class="leaf first menu-mlid-1582"><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/subsistemas/arquitectura" title="Arquitectura">Arquitectura</a></li>
+<li class="leaf menu-mlid-1583"><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/subsistemas/catalogo" title="Catálogo">Catálogo</a></li>
+<li class="leaf menu-mlid-1584 active-trail"><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/subsistemas/desarrollo" title="Desarrollo" class="active-trail">Desarrollo</a></li>
+<li class="leaf menu-mlid-1585"><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/subsistemas/interfaz-usuario" title="Interfaz de usuario">Interfaz de usuario</a></li>
+<li class="leaf menu-mlid-1591"><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/subsistemas/entorno" title="Entorno">Entorno</a></li>
+<li class="leaf menu-mlid-1593"><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/subsistemas/ingenieria" title="Ingeniería">Ingeniería</a></li>
+<li class="leaf last menu-mlid-1595"><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/subsistemas/verificacion" title="Verificación">Verificación</a></li>
+</ul></li>
+<li class="leaf last menu-mlid-10905"><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/procesos" title="PROCESOS">Procesos</a></li>
+</ul></div>
+  </div>
+
+  </div><!-- /.block -->
+<div id="block-madeja_print_cascade-0" class="block block-madeja_print_cascade last region-even even region-count-2 count-2">
+      <h2 class="title">Imprimir/exportar</h2>
+  
+  <div class="content">
+    <span class="print_html"><a href="https://www.juntadeandalucia.es/servicios/madeja/print/414" title="Display a printer-friendly version of this page." class="print-page" onclick="window.open(this.href); return false" rel="nofollow">Versión para imprimir</a></span><span class="print_pdf"><a href="https://www.juntadeandalucia.es/servicios/madeja/printpdf/414" title="Display a PDF version of this page." class="print-pdf" onclick="window.open(this.href); return false" rel="nofollow">Descargar como PDF</a></span>  </div>
+
+  </div><!-- /.block -->
+</div></div><!-- /.section, /.region -->
+
+      
+    </div></div> <!-- /#main, /#main-wrapper -->
+
+          <div id="footer">
+        <div class="section clearfix">
+
+                      <div id="footer-message">© JUNTA DE ANDALUCÍA</div>
+          
+          <div class="region region-footer">
+  <div id="block-menu-menu-footer-links" class="block block-menu first region-odd even region-count-1 count-4">
+      <h2 class="title">Enlaces pie</h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="leaf first"><a href="https://www.juntadeandalucia.es/servicios/madeja/accesibilidad" title="Declaración de accesibilidad del portal del marco de desarrollo de software de la Junta de Andalucía (MADEJA)">Declaración de accesibilidad del portal del marco de desarrollo de software de la Junta de Andalucía (MADEJA)</a></li>
+<li class="leaf"><a href="https://www.juntadeandalucia.es/servicios/madeja/legal" title="Legal">Legal</a></li>
+<li class="leaf last"><a href="https://www.juntadeandalucia.es/servicios/madeja/normas-dgpd" title="Enlace que dirige al listado de normas de la DGPD">Normas DGPD</a></li>
+</ul>  </div>
+
+  </div><!-- /.block -->
+<div id="block-block-1" class="block block-block last region-even odd region-count-2 count-5">
+      <h2 class="title">Script Google analytics</h2>
+  
+  <div class="content">
+    <!-- Global site tag (gtag.js) - Google Analytics --><!-- Global site tag (gtag.js) - Google Analytics --><script async="" src="./Patrones de diseño _ Marco de Desarrollo de la Junta de Andalucía_files/js(1)"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121431516-12');
+</script>  </div>
+
+  </div><!-- /.block -->
+</div><!-- /.region -->
+
+          <div id="footer-logos">
+            <a class="w3c-logo" href="http://validator.w3.org/check?uri=referer" title="Validador XHTML 1.0 Transitional" target="_blank">
+             <img height="32" width="88" src="./Patrones de diseño _ Marco de Desarrollo de la Junta de Andalucía_files/valid-xhtml10.png" alt="Icono de validador XHTML 1.0 Transitional">
+           </a>
+
+            <a class="w3c-logo" href="http://www.w3.org/WAI/WCAG1AA-Conformance" title="Explicación del Nivel Doble-A de Conformidad" target="_blank">
+              <img height="32" width="88" src="./Patrones de diseño _ Marco de Desarrollo de la Junta de Andalucía_files/wcag1AA.png" alt="Icono de conformidad con el Nivel Doble-A,  de las Directrices de Accesibilidad para el Contenido Web 1.0 del W3C-WAI">
+            </a>
+          </div>
+
+        </div>
+		
+		<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//www.juntadeandalucia.es/haciendayadministracionpublica/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '13']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//www.juntadeandalucia.es/haciendayadministracionpublica/piwik/piwik.php?idsite=13&rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+
+
+      </div> <!-- /.section, /#footer -->
+    
+  </div></div> <!-- /#page, /#page-wrapper -->
+
+  
+  <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+$("div.node table.sticky-enabled thead").addClass("tableHeader-processed");
+//--><!]]>
+</script>
+
+
+
+
+
+<div id="lightbox2-overlay" style="display: none;"></div>      <div id="lightbox" style="display: none;" class="lightbox2-orig-layout">        <div id="outerImageContainer" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);"><div id="modalContainer" style="display: none; padding: 10px;"></div><div id="frameContainer" style="display: none; padding: 10px;"></div><div id="imageContainer" style="display: none; padding: 10px;"><img id="lightboxImage" alt=""><div id="hoverNav"><a id="prevLink" title="Previous" href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/13#" style="padding-top: 10px;"></a><a id="nextLink" title="Next" href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/13#" style="padding-top: 10px;"></a></div></div><div id="loading"><a href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/13#" id="loadingLink"></a></div></div>        <div id="imageDataContainer" class="clearfix" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">          <div id="imageData"><div id="imageDetails"><span id="caption"></span><span id="numberDisplay"></span></div><div id="bottomNav"><div id="frameHoverNav"><a id="framePrevLink" title="Previous" href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/13#" style="padding-top: 10px;"></a><a id="frameNextLink" title="Next" href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/13#" style="padding-top: 10px;"></a></div><a id="bottomNavClose" title="Close" href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/13#" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);"></a><a id="bottomNavZoom" href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/13#"></a><a id="bottomNavZoomOut" href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/13#"></a><a id="lightshowPause" title="Pause Slideshow" href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/13#" style="display: none;"></a><a id="lightshowPlay" title="Play Slideshow" href="https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/13#" style="display: none;"></a></div></div>        </div>      </div></body></html>
