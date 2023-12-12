@@ -1,0 +1,2390 @@
+<!DOCTYPE html>
+<!-- saved from url=(0096)https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019 -->
+<html class="hasSidebar hasPageActions hasBreadcrumb conceptual has-default-focus theme-dark" lang="es-es" dir="ltr" data-css-variable-support="true" data-authenticated="false" data-auth-status-determined="true" data-target="docs" x-ms-format-detection="none"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:title" content="Tutorial: Depurar código de C# - Visual Studio (Windows)">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2022">
+			<meta property="og:description" content="Obtenga información sobre las características del depurador de Visual Studio y sobre cómo iniciarlo, recorrer el código e inspeccionar los datos de una aplicación de C#.">
+
+	<meta property="og:image" content="https://learn.microsoft.com/en-us/media/open-graph-image.png">
+
+	<meta property="og:image:alt" content="Microsoft Learn">
+
+	<meta name="twitter:card" content="summary_large_image">
+
+	<meta name="twitter:site" content="@MicrosoftLearn">
+
+	<meta name="color-scheme" content="light dark">
+
+
+	<meta name="archive_url" content="/previous-versions/visualstudio">
+<meta name="audience" content="developer">
+<meta name="author" content="Mikejo5000">
+<meta name="breadcrumb_path" content="/visualstudio/_breadcrumb/toc.json">
+<meta name="default_moniker" content="vs-2022">
+<meta name="depot_name" content="VS.docs">
+<meta name="description" content="Obtenga información sobre las características del depurador de Visual Studio y sobre cómo iniciarlo, recorrer el código e inspeccionar los datos de una aplicación de C#.">
+<meta name="document_id" content="b5f7635f-8884-5d88-fb84-e0d7f5ce5ac8">
+<meta name="document_version_independent_id" content="309c1bd5-c621-13c6-d341-7da20e4e4c29">
+<meta name="exclude_monikers" content="vs-2017">
+<meta name="feedback_help_link_type" content="">
+<meta name="feedback_help_link_url" content="">
+<meta name="feedback_product_url" content="">
+<meta name="feedback_system" content="None">
+<meta name="git_commit_id" content="00caba93907011337014449245fa2e40d749d24c">
+<meta name="gitcommit" content="https://github.com/MicrosoftDocs/visualstudio-docs-pr/blob/00caba93907011337014449245fa2e40d749d24c/docs/get-started/csharp/tutorial-debugger.md">
+<meta name="loc_file_id" content="Github-70191053.live.VS.docs.get-started/csharp/tutorial-debugger.md">
+<meta name="loc_source_id" content="Github-70191053#live">
+<meta name="loc_version" content="2023-10-30T23:09:22.9953796Z">
+<meta name="locale" content="es-es">
+<meta name="manager" content="jmartens">
+<meta name="monikers" content="vs-2019">
+<meta name="monikers" content="vs-2022">
+<meta name="ms.author" content="mikejo">
+<meta name="ms.contentlocale" content="es-es">
+<meta name="ms.date" content="10/25/2023">
+<meta name="ms.prod" content="visual-studio-windows">
+<meta name="ms.technology" content="vs-ide-debug">
+<meta name="ms.topic" content="tutorial">
+<meta name="ms.translationtype" content="HT">
+<meta name="original_content_git_url" content="https://github.com/MicrosoftDocs/visualstudio-docs-pr/blob/live/docs/get-started/csharp/tutorial-debugger.md">
+<meta name="page_type" content="conceptual">
+<meta name="recommendations" content="true">
+<meta name="schema" content="Conceptual">
+<meta name="search.mshattr.devlang" content="csharp">
+<meta name="site_name" content="Docs">
+<meta name="toc_preview" content="true">
+<meta name="toc_rel" content="toc.json">
+<meta name="uhfHeaderId" content="MSDocsHeader-VisualStudio">
+<meta name="updated_at" content="2023-11-30 07:54 AM">
+<meta name="word_count" content="4924">
+
+
+	<meta name="recommendation_types" content="Training">
+	<meta name="recommendation_types" content="Certification">
+	
+
+	<meta name="persistent_id" content="5d121569-ffce-23c2-7a2c-b8ad4b2e2836">
+	
+
+
+	<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/bcbcbad5-4208-4783-8035-8481272c98b8" data-source="generated">
+
+	<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/4628cbd9-6f47-4ae1-b371-d34636609eaf" data-source="generated">
+
+	<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/7696cda6-0510-47f6-8302-71bb5d2e28cf" data-source="generated">
+
+	
+
+
+	<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/43b2e5aa-8a6d-4de2-a252-692232e5edc8" data-source="generated">
+
+	<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/be21deb8-8c64-44b0-b71f-2dc56ca7364f" data-source="generated">
+
+	<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/69c76c32-967e-4c65-b89a-74cc527db725" data-source="generated">
+
+	
+
+	<meta name="scope" content="VS IDE">
+	<meta name="github_feedback_content_git_url" content="https://github.com/MicrosoftDocs/visualstudio-docs/blob/main/docs/get-started/csharp/tutorial-debugger.md">
+<link href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2022" rel="canonical">
+	<title>Tutorial: Depurar código de C# - Visual Studio (Windows) | Microsoft Learn</title>
+
+		<link rel="stylesheet" href="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/706595c3.site-ltr.css">
+
+	
+
+	<script id="msdocs-script">
+	var msDocs = {
+		data: {
+			timeOrigin: Date.now(),
+			contentLocale: 'es-es',
+			contentDir: 'ltr',
+			userLocale: 'es-es',
+			userDir: 'ltr',
+			pageTemplate: 'Conceptual',
+			brand: '',
+			context: {
+			},
+			hasBinaryRating: true,
+			hasGithubIssues: false,
+			feedbackHelpLinkType:'',
+			feedbackHelpLinkUrl:'',
+			standardFeedback: false,
+			showFeedbackReport: false,
+			enableTutorialFeedback: false,
+			contentWellNotification: '',
+			feedbackSystem: 'None',
+			feedbackGitHubRepo: '',
+			feedbackProductUrl: '',
+			defaultDevLang: 'csharp',
+			extendBreadcrumb: false,
+			isEditDisplayable: false,
+			hideViewSource: false,
+			hasPageActions: true,
+			hasPrintButton: true,
+			hasBookmark: true,
+			hasShare: true,
+			isPermissioned: false,
+			isPrivateUnauthorized: false,
+			hasRecommendations: true,
+			contributors: [
+						{ name: "Mikejo5000", url: "https://github.com/Mikejo5000" },
+						{ name: "GitHubber17", url: "https://github.com/GitHubber17" },
+						{ name: "Saisang", url: "https://github.com/Saisang" },
+						{ name: "anandmeg", url: "https://github.com/anandmeg" },
+						{ name: "j-martens", url: "https://github.com/j-martens" },
+						{ name: "ghogen", url: "https://github.com/ghogen" },
+						{ name: "v-trisshores", url: "https://github.com/v-trisshores" },
+						{ name: "v-thpra", url: "https://github.com/v-thpra" },
+						{ name: "Court72", url: "https://github.com/Court72" },
+						{ name: "kraigb", url: "https://github.com/kraigb" },
+						{ name: "TerryGLee", url: "https://github.com/TerryGLee" },
+						{ name: "gewarren", url: "https://github.com/gewarren" }
+],
+		},
+		functions:{}
+	};
+	</script>
+	<script src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/wcp-consent.js.descargar"></script>
+	<script src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/ms.jsll-3.min.js.descargar"></script>
+
+	<script src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/67a45209.deprecation.js.descargar"></script>
+		<link rel="preconnect" href="https://mscom.demdex.net/" crossorigin="">
+		<link rel="dns-prefetch" href="https://target.microsoft.com/">
+		<link rel="dns-prefetch" href="https://microsoftmscompoc.tt.omtrdc.net/">
+		<link rel="preload" as="script" href="https://learn.microsoft.com/static/third-party/adobe-target/at-js/2.9.0/at.js" integrity="sha384-1/viVM50hgc33O2gOgkWz3EjiD/Fy/ld1dKYXJRUyjNYVEjSUGcSN+iPiQF7e4cu" crossorigin="anonymous" id="adobe-target-script" type="application/javascript">
+		<script src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/f3c039fe.index-docs.js.descargar"></script><style>
+		[data-moniker]:not([data-moniker~='vs-2019']) {
+			display: none !important;
+		}
+	</style>
+<style id="ms-consent-banner-main-styles">.w8hcgFksdo30C8w-bygqu{color:#000}.ydkKdaztSS0AeHWIeIHsQ a{color:#0067B8}.erL690_8JwUW-R4bJRcfl{background-color:#EBEBEB;border:none;color:#000}.erL690_8JwUW-R4bJRcfl:enabled:hover{color:#000;background-color:#DBDBDB;box-shadow:0px 4px 10px rgba(0,0,0,0.25);border:none}.erL690_8JwUW-R4bJRcfl:enabled:focus{background-color:#DBDBDB;box-shadow:0px 4px 10px rgba(0,0,0,0.25);border:2px solid #000}.erL690_8JwUW-R4bJRcfl:disabled{opacity:1;color:rgba(0,0,0,0.2);background-color:rgba(0,0,0,0.2);border:none}._1zNQOqxpBFSokeCLGi_hGr{border:none;background-color:#0067B8;color:#fff}._1zNQOqxpBFSokeCLGi_hGr:enabled:hover{color:#fff;background-color:#0067B8;box-shadow:0px 4px 10px rgba(0,0,0,0.25);border:none}._1zNQOqxpBFSokeCLGi_hGr:enabled:focus{background-color:#0067B8;box-shadow:0px 4px 10px rgba(0,0,0,0.25);border:2px solid #000}._1zNQOqxpBFSokeCLGi_hGr:disabled{opacity:1;color:rgba(0,0,0,0.2);background-color:rgba(0,120,215,0.2);border:none}._23tra1HsiiP6cT-Cka-ycB{position:relative;display:flex;z-index:9999;width:100%;background-color:#F2F2F2;justify-content:space-between;text-align:left}div[dir="rtl"]._23tra1HsiiP6cT-Cka-ycB{text-align:right}._1Upc2NjY8AlDn177YoVj0y{margin:0;padding-left:5%;padding-top:8px;padding-bottom:8px}div[dir="rtl"] ._1Upc2NjY8AlDn177YoVj0y{margin:0;padding:8px 5% 8px 0;float:none}._23tra1HsiiP6cT-Cka-ycB svg{fill:none;max-width:none;max-height:none}._1V_hlU-7jdtPiooHMu89BB{display:table-cell;padding:12px;width:24px;height:24px;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:24px;line-height:0}.f6QKJD7fhSbnJLarTL-W-{display:table-cell;vertical-align:middle;padding:0;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:13px;line-height:16px}.f6QKJD7fhSbnJLarTL-W- a{text-decoration:underline}._2j0fmugLb1FgYz6KPuB91w{display:inline-block;margin-left:5%;margin-right:5%;min-width:40%;min-width:calc((150px + 3 * 4px) * 2 + 150px);min-width:-webkit-fit-content;min-width:-moz-fit-content;min-width:fit-content;align-self:center;position:relative}._1XuCi2WhiqeWRUVp3pnFG3{margin:4px;padding:5px;min-width:150px;min-height:36px;vertical-align:top;cursor:pointer;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:15px;line-height:20px;text-align:center}._1XuCi2WhiqeWRUVp3pnFG3:focus{box-sizing:border-box}._1XuCi2WhiqeWRUVp3pnFG3:disabled{cursor:not-allowed}._2bvsb3ubApyZ0UGoQA9O9T{display:block;position:fixed;z-index:10000;top:0;left:0;width:100%;height:100%;background-color:rgba(255,255,255,0.6);overflow:auto;text-align:left}div[dir="rtl"]._2bvsb3ubApyZ0UGoQA9O9T{text-align:right}div[dir="rtl"] ._2bvsb3ubApyZ0UGoQA9O9T{left:auto;right:0}.AFsJE948muYyzCMktdzuk{position:relative;top:8%;margin-bottom:40px;margin-left:auto;margin-right:auto;box-sizing:border-box;width:640px;background-color:#fff;border:1px solid #0067B8}._3kWyBRbW_dgnMiEyx06Fu4{float:right;z-index:1;margin:2px;padding:12px;border:none;cursor:pointer;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:13px;line-height:13px;display:flex;align-items:center;text-align:center;color:#666;background-color:#fff}div[dir="rtl"] ._3kWyBRbW_dgnMiEyx06Fu4{margin:2px;padding:12px;float:left}.uCYvKvHXrhjNgflv1VqdD{position:static;margin-top:36px;margin-left:36px;margin-right:36px}._17pX1m9O_W--iZbDt3Ta5r{margin-top:0;margin-bottom:12px;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:600;font-size:20px;line-height:24px;text-transform:none}._1kBkHQ1V1wu3kl-YcLgUr6{height:446px;overflow:auto}._20_nXDf6uFs9Q6wxRXG-I-{margin-top:0;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:15px;line-height:20px}._20_nXDf6uFs9Q6wxRXG-I- a{text-decoration:underline}dl._2a0NH_GDQEQe5Ynfo7suVH{margin-top:36px;margin-bottom:0;padding:0;list-style:none;text-transform:none}dt._3j_LCPv7fyXv3A8FIXVwZ4{margin-top:20px;float:none;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:600;font-size:18px;line-height:24px;list-style:none}.k-vxTGFbdq1aOZB2HHpjh{margin:0;padding:0;border:none}._2Bucyy75c_ogoU1g-liB5R{margin:0;padding:0;border-bottom:none;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:600;font-size:18px;line-height:24px;text-transform:none}._63gwfzV8dclrsl2cfd90r{display:inline-block;margin-top:0;margin-bottom:13px;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:15px;line-height:20px}._1l8wM_4mRYGz3Iu7l3BZR7{display:block}._2UE03QS02aZGkslegN_F-i{display:inline-block;position:relative;left:5px;margin-bottom:13px;margin-right:34px;padding:3px}div[dir="rtl"] ._2UE03QS02aZGkslegN_F-i{margin:0 0 13px 34px;padding:3px;float:none}div[dir="rtl"] ._2UE03QS02aZGkslegN_F-i{left:auto;right:5px}._23tra1HsiiP6cT-Cka-ycB *::before,._2bvsb3ubApyZ0UGoQA9O9T *::before,._23tra1HsiiP6cT-Cka-ycB *::after,._2bvsb3ubApyZ0UGoQA9O9T *::after{box-sizing:inherit}._1HSFn0HzGo6w4ADApV8-c4{outline:2px solid rgba(0,0,0,0.8)}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2{display:inline-block;position:relative;margin-top:0;margin-left:0;margin-right:0;height:0;width:0;border-radius:0;cursor:pointer;outline:none;box-sizing:border-box;-webkit-appearance:none;-moz-appearance:none;appearance:none}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2+label::before{display:block;position:absolute;top:5px;left:3px;height:19px;width:19px;content:"";border-radius:50%;border:1px solid #000;background-color:#fff}div[dir="rtl"] input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2+label::before{left:auto;right:3px}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:not(:disabled)+label:hover::before{border:1px solid #0067B8}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:not(:disabled)+label:hover::after{display:block;position:absolute;top:10px;left:8px;height:9px;width:9px;content:"";border-radius:50%;background-color:rgba(0,0,0,0.8)}div[dir="rtl"] input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:not(:disabled)+label:hover::after{left:auto;right:8px}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:not(:disabled)+label:focus::before{border:1px solid #0067B8}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:not(:disabled)+label:focus::after{display:block;position:absolute;top:10px;left:8px;height:9px;width:9px;content:"";border-radius:50%;background-color:#000}div[dir="rtl"] input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:not(:disabled)+label:focus::after{left:auto;right:8px}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:checked+label::after{display:block;position:absolute;top:10px;left:8px;height:9px;width:9px;content:"";border-radius:50%;background-color:#000}div[dir="rtl"] input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:checked+label::after{left:auto;right:8px}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:disabled+label{cursor:not-allowed}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:disabled+label::before{border:1px solid rgba(0,0,0,0.2);background-color:rgba(0,0,0,0.2)}._3RJzeL3l9Rl_lAQEm6VwdX{display:block;position:static;float:right;margin-top:0;margin-bottom:0;margin-left:19px;margin-right:0;padding-top:0;padding-bottom:0;padding-left:8px;padding-right:0;width:80%;width:calc(100% - 19px);font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:15px;line-height:20px;text-transform:none;cursor:pointer;box-sizing:border-box}div[dir="rtl"] ._3RJzeL3l9Rl_lAQEm6VwdX{margin:0 19px 0 0;padding:0 8px 0 0;float:left}.nohp3sIG12ZBhzcMnPala{margin-top:20px;margin-bottom:48px}._2uhaEsmeotZ3P-M0AXo2kF{padding:0;width:278px;height:36px;cursor:pointer;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:15px;line-height:20px;text-align:center}._2uhaEsmeotZ3P-M0AXo2kF:focus{box-sizing:border-box}._2uhaEsmeotZ3P-M0AXo2kF:disabled{cursor:not-allowed}._3tOu1FJ59c_xz_PmI1lKV5{float:right;padding:0;width:278px;height:36px;cursor:pointer;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:15px;line-height:20px;text-align:center}._3tOu1FJ59c_xz_PmI1lKV5:focus{box-sizing:border-box}._3tOu1FJ59c_xz_PmI1lKV5:disabled{cursor:not-allowed}div[dir="rtl"] ._3tOu1FJ59c_xz_PmI1lKV5{margin:0;padding:0;float:left}@media only screen and (max-width: 768px){._2j0fmugLb1FgYz6KPuB91w,._1Upc2NjY8AlDn177YoVj0y{padding-top:8px;padding-bottom:12px;padding-left:3.75%;padding-right:3.75%;margin:0;width:92.5%}._23tra1HsiiP6cT-Cka-ycB{display:block}._1XuCi2WhiqeWRUVp3pnFG3{margin-bottom:8px;margin-left:0;margin-right:0;width:100%}._2bvsb3ubApyZ0UGoQA9O9T{overflow:hidden}.AFsJE948muYyzCMktdzuk{top:1.8%;width:93.33%;height:96.4%;overflow:hidden}.uCYvKvHXrhjNgflv1VqdD{margin-top:24px;margin-left:24px;margin-right:24px;height:100%}._1kBkHQ1V1wu3kl-YcLgUr6{height:62%;height:calc(100% - 188px);min-height:50%}._2uhaEsmeotZ3P-M0AXo2kF{width:100%}._3tOu1FJ59c_xz_PmI1lKV5{margin-bottom:12px;margin-left:0;width:100%}div[dir="rtl"] ._3tOu1FJ59c_xz_PmI1lKV5{margin:0 0 12px 0;padding:0;float:none}}@media only screen and (max-width: 768px) and (orientation: landscape), only screen and (max-height: 260px), only screen and (max-width: 340px){.AFsJE948muYyzCMktdzuk{overflow:auto}}@media only screen and (max-height: 260px), only screen and (max-width: 340px){._1XuCi2WhiqeWRUVp3pnFG3{min-width:0}._3kWyBRbW_dgnMiEyx06Fu4{padding:3%}.uCYvKvHXrhjNgflv1VqdD{margin-top:3%;margin-left:3%;margin-right:3%}._17pX1m9O_W--iZbDt3Ta5r{margin-bottom:3%}._1kBkHQ1V1wu3kl-YcLgUr6{height:calc(79% - 64px)}.nohp3sIG12ZBhzcMnPala{margin-top:5%;margin-bottom:10%}._3tOu1FJ59c_xz_PmI1lKV5{margin-bottom:3%}div[dir="rtl"] ._3tOu1FJ59c_xz_PmI1lKV5{margin:0 0 3% 0;padding:0;float:none}}
+</style><style type="text/css" id="ms-consent-banner-theme-styles">._23tra1HsiiP6cT-Cka-ycB {
+            background-color: #242424 !important;
+        }.w8hcgFksdo30C8w-bygqu {
+            color: #E3E3E3 !important;
+        }.ydkKdaztSS0AeHWIeIHsQ a {
+            color: #4DB2FF !important;
+        }._2bvsb3ubApyZ0UGoQA9O9T {
+            background-color: rgba(23, 23, 23, 0.6) !important;
+        }.AFsJE948muYyzCMktdzuk {
+            background-color: #171717 !important;
+            border: 1px solid #4DB2FF !important;
+        }._3kWyBRbW_dgnMiEyx06Fu4 {
+            color: #E3E3E3 !important;
+            background-color: #171717 !important;
+        }._1zNQOqxpBFSokeCLGi_hGr {
+            border: 1px solid #4DB2FF !important;
+            background-color: #4DB2FF !important;
+            color: black !important;
+        }._1zNQOqxpBFSokeCLGi_hGr:enabled:hover {
+            color: black !important;
+            background-color: #0091FF !important;
+            box-shadow: none !important;
+            border: 1px solid rgba(0, 0, 0, 0) !important;
+        }._1zNQOqxpBFSokeCLGi_hGr:enabled:focus {
+            background-color: #0091FF !important;
+            box-shadow: none !important;
+            border: 2px solid #4DB2FF !important;
+        }._1zNQOqxpBFSokeCLGi_hGr:disabled {
+            opacity: 0.5 !important;
+            color: black !important;
+            background-color: #4DB2FF !important;
+            border: 1px solid rgba(255, 255, 255, 0) !important;
+        }.erL690_8JwUW-R4bJRcfl {
+            border: 1px solid #C7C7C7 !important;
+            background-color: #171717 !important;
+            color: #E3E3E3 !important;
+        }.erL690_8JwUW-R4bJRcfl:enabled:hover {
+            color: #E3E3E3 !important;
+            background-color: #2E2E2E !important;
+            box-shadow: none !important;
+            border: 1px solid #C7C7C7 !important;
+        }.erL690_8JwUW-R4bJRcfl:enabled:focus {
+            background-color: #2E2E2E !important;
+            box-shadow: none !important;
+            border: 2px solid #C7C7C7 !important;
+        }.erL690_8JwUW-R4bJRcfl:disabled {
+            opacity: 0.5 !important;
+            color: #E3E3E3 !important;
+            background-color: #2E2E2E !important;
+            border: 1px solid #242424 !important;
+        }input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2 + label::before {
+            border: 1px solid #E3E3E3 !important;
+            background-color: #171717 !important;
+        }._1HSFn0HzGo6w4ADApV8-c4 {
+            outline: 2px solid rgba(227, 227, 227, 0.8) !important;
+        }input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:checked + label::after {
+            background-color: #E3E3E3 !important;
+        }input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2 + label:hover::before {
+            border: 1px solid #4DB2FF !important;
+        }input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2 + label:hover::after {
+            background-color: rgba(227, 227, 227, 0.8) !important;
+        }input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2 + label:focus::before {
+            border: 1px solid #4DB2FF !important;
+        }input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2 + label:focus::after {
+            background-color: #E3E3E3 !important;
+        }input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:disabled + label::before {
+            border: 1px solid rgba(227, 227, 227, 0.2) !important;
+            background-color: rgba(227, 227, 227, 0.2) !important;
+        }</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"Learn","position":1,"@type":"ListItem","item":"https://learn.microsoft.com/es-es/?view=vs-2019"},{"name":"Visual Studio","position":2,"@type":"ListItem","item":"https://learn.microsoft.com/es-es/visualstudio/windows/?view=vs-2019"}]}</script></head>
+
+<body lang="es-es" dir="ltr">
+	<div class="header-holder has-default-focus">
+		<a href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#main" class="skip-to-main-link has-outline-color-text visually-hidden-until-focused position-fixed has-inner-focus focus-visible top-0 left-0 right-0 padding-xs has-text-centered has-body-background" tabindex="1">Ir al contenido principal</a>
+
+		<div id="cookie-consent-holder" data-test-id="cookie-consent-container"><div id="wcpConsentBannerCtrl" class="_23tra1HsiiP6cT-Cka-ycB" dir="ltr" role="alert">
+        <div class="_1Upc2NjY8AlDn177YoVj0y">
+            <span class="_1V_hlU-7jdtPiooHMu89BB w8hcgFksdo30C8w-bygqu">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 44 44" width="24px" height="24px" fill="none" stroke="currentColor">
+          <circle cx="22" cy="22" r="20" stroke-width="2"></circle>
+          <line x1="22" x2="22" y1="18" y2="33" stroke-width="3"></line>
+          <line x1="22" x2="22" y1="12" y2="15" stroke-width="3"></line>
+        </svg>
+        </span> <!--  used for icon  -->
+            <p class="f6QKJD7fhSbnJLarTL-W- ydkKdaztSS0AeHWIeIHsQ w8hcgFksdo30C8w-bygqu">
+                Utilizamos cookies opcionales para mejorar tu experiencia en nuestros sitios web, como a través de conexiones en redes sociales, y para mostrar publicidad personalizada en función de tu actividad en línea. Si rechazas las cookies opcionales, solo se utilizarán las cookies necesarias para prestarte nuestros servicios. Puedes cambiar tu selección si haces clic en 'Gestionar cookies' al final de la página.&nbsp;<a target="_blank" href="https://go.microsoft.com/fwlink/?LinkId=521839">Declaración de privacidad</a> <a target="_blank" href="https://aka.ms/3rdpartycookies">Cookies de terceros</a>
+            </p>
+        </div>
+
+        <div class="_2j0fmugLb1FgYz6KPuB91w">
+            <button type="button" class="_1XuCi2WhiqeWRUVp3pnFG3 erL690_8JwUW-R4bJRcfl">Aceptar</button>
+            <button type="button" class="_1XuCi2WhiqeWRUVp3pnFG3 erL690_8JwUW-R4bJRcfl">Rechazar</button>
+            <button type="button" class="_1XuCi2WhiqeWRUVp3pnFG3 erL690_8JwUW-R4bJRcfl">Gestionar cookies</button>
+        </div>
+        </div></div><div id="banner-holder" class="has-default-focus has-overflow-hidden theme-light"><!----><section data-bi-name="tier1-event-banner" data-dismissable="disappearing" class="tier1-event-banner position-relative padding-block-md skills-challenge-banner padding-block-xs display-none-visual-diff">
+		<div class="uhf-container display-flex-tablet align-items-center">
+			<div class="has-backdrop-filter-blur margin-right-xxl-tablet">
+				<h2 class="title is-2 margin-bottom-xs"><!---->Desafío de conocimientos de la nube<!----></h2>
+				<p class="font-size-sm"><!---->Nov 15, 2023 - Jan 15, 2024<!----></p>
+			</div>
+			<p class="container is-max-mobile display-none display-block-widescreen has-backdrop-filter-blur font-size-sm margin-left-none margin-right-xxl">
+				Enter to win a VIP event pass for the next Microsoft Ignite or Microsoft Build! Choose from twelve unique collections on Microsoft Learn.
+			</p>
+			<a data-bi-name="CTA" class="button margin-block-sm " href="https://aka.ms/ignitecsc?ocid=ignite23_CSC_bbanner_cnl">
+				<span><!---->Regístrese ahora<!----></span>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-chevron-right-light"></span>
+				</span>
+			</a>
+		</div>
+		<button type="button" data-dismiss="" data-bi-name="close" class="button delete delete-lg position-absolute top-0 right-0 margin-xs margin-sm-tablet ">
+			<span class="visually-hidden"><!---->Descartar alerta<!----></span>
+		</button>
+	</section><!----></div>
+
+		<div id="unsupported-browser" style="
+			background-color: white;
+			color: black;
+			padding: 16px;
+			border-bottom: 1px solid grey;" hidden="">
+			<div style="max-width: 800px; margin: 0 auto;">
+				<p style="font-size: 24px">Este explorador ya no se admite.</p>
+				<p style="font-size: 16px; margin-top: 16px;">Actualice a Microsoft&nbsp;Edge para aprovechar las características y actualizaciones de seguridad más recientes, y disponer de soporte técnico.</p>
+				<div style="margin-top: 12px;">
+					<a href="https://go.microsoft.com/fwlink/p/?LinkID=2092881" style="
+						background-color: #0078d4;
+						border: 1px solid #0078d4;
+						color: white;
+						padding: 6px 12px;
+						border-radius: 2px;
+						display: inline-block;
+						">
+Descargar Microsoft&nbsp;Edge					</a>
+					<a href="https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge" style="
+							background-color: white;
+							padding: 6px 12px;
+							border: 1px solid #505050;
+							color: #171717;
+							border-radius: 2px;
+							display: inline-block;
+							">
+Más información sobre Internet Explorer y Microsoft Edge					</a>
+				</div>
+			</div>
+		</div>
+		<!-- liquid-tag banners global -->
+
+		<!-- site header -->
+		<header id="ms--site-header" class="display-none"></header>
+
+		<div id="headerAreaHolder" data-bi-name="header">
+<header role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization"><!----> <div class="nav-bar" data-test-id="primary-nav-bar" data-bi-name="L1-header"><!----> 
+		<div class="display-flex align-items-center padding-none margin-left-xs margin-left-none-tablet margin-right-xxs">
+			
+					<a itemprop="url" href="https://www.microsoft.com/" aria-label="Microsoft" data-bi-name="microsoft-logo-link">
+						
+				<div role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope" class="nav-bar-logo">
+					
+		<svg xmlns="http://www.w3.org/2000/svg" width="108" height="23" viewBox="72 72 337 74" preserveAspectRatio="xMidYMin slice">
+			<g data-name="MS-symbol">
+				<clippath>
+					<path transform="matrix(1 0 0 -1 0 216)" d="M0 216h482V0H0z"></path>
+				</clippath>
+				<g clip-path="url(#a)">
+					<path d="M394.942 104.59h-10.858v25.003h-7.38V104.59h-5.182v-5.965h5.182v-4.308c0-3.254 1.06-5.92 3.178-7.998 2.12-2.079 4.835-3.118 8.15-3.118.882 0 1.666.045 2.35.135a9.37 9.37 0 011.806.407v6.296c-.24-.14-.663-.31-1.265-.512-.603-.2-1.296-.3-2.078-.3-1.528 0-2.702.476-3.526 1.43-.824.954-1.235 2.365-1.235 4.232v3.736h10.858v-6.959l7.321-2.229v9.188h7.381v5.965h-7.38v14.49c0 1.91.345 3.254 1.038 4.037.693.783 1.782 1.175 3.27 1.175.42 0 .927-.1 1.52-.3a7.178 7.178 0 001.552-.724v6.025c-.463.261-1.23.502-2.305.723a15.742 15.742 0 01-3.178.331c-3.073 0-5.378-.817-6.914-2.455-1.537-1.637-2.305-4.102-2.305-7.396zm-48.407 9.73c0 3.233.733 5.703 2.2 7.411 1.465 1.707 3.564 2.56 6.295 2.56 2.652 0 4.67-.853 6.055-2.56 1.386-1.708 2.08-4.238 2.08-7.592 0-3.334-.719-5.849-2.155-7.547-1.436-1.697-3.45-2.545-6.04-2.545-2.67 0-4.745.888-6.22 2.666-1.477 1.777-2.215 4.313-2.215 7.607m-7.592.24c0-5.12 1.446-9.177 4.338-12.17 2.892-2.993 6.91-4.489 12.05-4.489 4.841 0 8.621 1.441 11.343 4.323 2.721 2.883 4.082 6.774 4.082 11.674 0 5.021-1.447 9.018-4.338 11.99-2.892 2.973-6.829 4.458-11.81 4.458-4.8 0-8.61-1.41-11.432-4.232-2.822-2.82-4.233-6.673-4.233-11.554m-16.417-7.802c0 1.045.331 1.863.994 2.456.662.592 2.128 1.34 4.398 2.243 2.912 1.166 4.956 2.476 6.131 3.932 1.175 1.456 1.762 3.22 1.762 5.287 0 2.912-1.12 5.252-3.359 7.02-2.24 1.767-5.267 2.65-9.083 2.65-1.285 0-2.706-.155-4.263-.467-1.556-.31-2.877-.707-3.96-1.19v-7.169a17.945 17.945 0 004.277 2.198c1.526.543 2.911.814 4.157.814 1.647 0 2.862-.23 3.645-.693.784-.46 1.175-1.235 1.175-2.319 0-1.005-.406-1.853-1.22-2.546-.813-.693-2.355-1.492-4.624-2.395-2.69-1.125-4.599-2.39-5.724-3.796-1.125-1.406-1.687-3.193-1.687-5.362 0-2.792 1.11-5.086 3.33-6.884 2.217-1.797 5.095-2.696 8.63-2.696 1.084 0 2.3.12 3.645.361 1.346.242 2.47.553 3.374.934v6.93c-.964-.644-2.089-1.195-3.374-1.658-1.286-.462-2.56-.693-3.826-.693-1.386 0-2.465.271-3.238.813-.774.543-1.16 1.286-1.16 2.23m-35.066 7.562c0 3.233.733 5.703 2.2 7.411 1.465 1.707 3.564 2.56 6.295 2.56 2.652 0 4.67-.853 6.055-2.56 1.386-1.708 2.08-4.238 2.08-7.592 0-3.334-.719-5.849-2.155-7.547-1.436-1.697-3.449-2.545-6.039-2.545-2.672 0-4.745.888-6.222 2.666-1.476 1.777-2.214 4.313-2.214 7.607m-7.592.24c0-5.12 1.446-9.177 4.338-12.17 2.893-2.993 6.91-4.489 12.051-4.489 4.84 0 8.621 1.441 11.342 4.323 2.721 2.883 4.082 6.774 4.082 11.674 0 5.021-1.446 9.018-4.338 11.99-2.892 2.973-6.828 4.458-11.809 4.458-4.8 0-8.61-1.41-11.433-4.232-2.822-2.82-4.233-6.673-4.233-11.554m-3.136-16.448c.582 0 1.105.041 1.567.121.462.08.853.18 1.175.301v7.38c-.382-.28-.939-.546-1.672-.798-.733-.25-1.622-.376-2.666-.376-1.788 0-3.299.753-4.534 2.26-1.235 1.505-1.853 3.825-1.853 6.958v15.635h-7.29V98.624h7.29v4.88h.12c.663-1.687 1.667-3.007 3.013-3.96 1.346-.954 2.962-1.432 4.85-1.432m-27.956 26.18c1.084 0 2.28-.25 3.585-.754a15.06 15.06 0 003.615-1.988v6.778c-1.165.663-2.485 1.165-3.962 1.506-1.475.342-3.098.512-4.865.512-4.559 0-8.265-1.44-11.116-4.323-2.852-2.88-4.278-6.562-4.278-11.04 0-4.98 1.456-9.083 4.37-12.307 2.91-3.224 7.037-4.835 12.38-4.835 1.366 0 2.746.176 4.143.527 1.395.352 2.504.758 3.328 1.22v6.99c-1.125-.824-2.274-1.462-3.45-1.914a9.966 9.966 0 00-3.599-.678c-2.872 0-5.192.934-6.959 2.802-1.768 1.868-2.652 4.388-2.652 7.562 0 3.132.85 5.573 2.546 7.32 1.697 1.748 4.002 2.621 6.914 2.621m-22.112 5.302h-7.29V98.624h7.29zm-8.044-39.916c0-1.205.437-2.214 1.311-3.028.874-.813 1.913-1.22 3.118-1.22 1.285 0 2.35.417 3.193 1.25.844.834 1.266 1.833 1.266 2.998 0 1.185-.432 2.18-1.296 2.982-.864.804-1.918 1.205-3.163 1.205-1.246 0-2.295-.406-3.148-1.219-.854-.815-1.28-1.803-1.28-2.968m-6.274-3.284v43.2h-7.5v-33.86h-.12l-13.408 33.86h-4.97l-13.738-33.86h-.09v33.86h-6.929v-43.2h10.755l12.412 32.024h.18l13.105-32.024z" class="fill-current-color fill-link-text-forced-colors color-text-subtle"></path>
+					<path d="M106.214 106.214H71.996V71.996h34.218z" fill="#f25022"></path>
+					<path d="M143.993 106.214h-34.218V71.996h34.218z" fill="#7fba00"></path>
+					<path d="M106.214 143.993H71.996v-34.218h34.218z" fill="#00a4ef"></path>
+					<path d="M143.993 143.993h-34.218v-34.218h34.218z" fill="#ffb900"></path>
+				</g>
+			</g>
+		</svg>
+	
+				</div>
+		  
+					</a>
+			   
+		</div>
+	 
+				
+		<div class="nav-bar-item is-hidden-tablet">
+			<div class="nav-bar-menu">
+				<button type="button" class="nav-bar-button is-title" data-test-id="mobile-nav-expander" title="Navegación global" aria-expanded="false">
+					<span class="nav-bar-menu-title"><!---->Documentación<!----></span>
+					<div class="nav-bar-burger">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span class="nav-bar-burger-label"><!---->Navegación global<!----></span>
+					</div>
+				</button>
+			</div>
+		</div>
+	
+				
+		<nav class="nav-bar-nav" role="navigation" aria-label="Global">
+			<ul class="nav-bar-nav-list">
+				
+		<li class="nav-bar-item is-category">
+			<a data-test-id="header-link-category" class="nav-bar-button is-title has-hover-underline" itemprop="url" data-bi-name="L1-category-link" href="https://learn.microsoft.com/es-es/">
+				<span><!---->Learn<!----></span>
+			</a>
+		</li>
+	
+				<!---->
+				<li class="nav-bar-item">
+					<a data-test-id="header-link-documentación" class=" nav-bar-button has-hover-underline is-active" href="https://learn.microsoft.com/es-es/docs/" aria-current="true" data-bi-name="L1-navigation-link">
+						<span><!---->Documentación<!----></span>
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a data-test-id="header-link-cursos" class=" nav-bar-button has-hover-underline " href="https://learn.microsoft.com/es-es/training/" data-bi-name="L1-navigation-link">
+						<span><!---->Cursos<!----></span>
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a data-test-id="header-link-credencial" class=" nav-bar-button has-hover-underline " href="https://learn.microsoft.com/es-es/credentials/" data-bi-name="L1-navigation-link">
+						<span><!---->Credencial<!----></span>
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a data-test-id="header-link-q&amp;a" class=" nav-bar-button has-hover-underline " href="https://learn.microsoft.com/es-es/answers/" data-bi-name="L1-navigation-link">
+						<span><!---->Q&amp;A<!----></span>
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a data-test-id="header-link-ejemplos-de-código" class=" nav-bar-button has-hover-underline " href="https://learn.microsoft.com/es-es/samples/browse/" data-bi-name="L1-navigation-link">
+						<span><!---->Ejemplos de código<!----></span>
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a data-test-id="header-link-valoraciones" class=" nav-bar-button has-hover-underline " href="https://learn.microsoft.com/es-es/assessments/" data-bi-name="L1-navigation-link">
+						<span><!---->Valoraciones<!----></span>
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a data-test-id="header-link-programa" class=" nav-bar-button has-hover-underline " href="https://learn.microsoft.com/es-es/shows/" data-bi-name="L1-navigation-link">
+						<span><!---->Programa<!----></span>
+					</a>
+				</li>
+		  <!----> <li class="dropdown nav-bar-item" hidden="">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button  has-hover-underline" aria-controls="ax-82" data-bi-name="L1-navigation-menu" value="undefined">
+			<span><!---->Más<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-down-light expanded-indicator"></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-82" aria-label="Más">
+			<!---->
+				<li class="nav-bar-item" hidden="">
+					<a class=" nav-bar-button is-active" href="https://learn.microsoft.com/es-es/docs/" aria-current="true" data-bi-name="L1-navigation-link">
+						Documentación
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class=" nav-bar-button " href="https://learn.microsoft.com/es-es/training/" data-bi-name="L1-navigation-link">
+						Cursos
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class=" nav-bar-button " href="https://learn.microsoft.com/es-es/credentials/" data-bi-name="L1-navigation-link">
+						Credencial
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class=" nav-bar-button " href="https://learn.microsoft.com/es-es/answers/" data-bi-name="L1-navigation-link">
+						Q&amp;A
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class=" nav-bar-button " href="https://learn.microsoft.com/es-es/samples/browse/" data-bi-name="L1-navigation-link">
+						Ejemplos de código
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class=" nav-bar-button " href="https://learn.microsoft.com/es-es/assessments/" data-bi-name="L1-navigation-link">
+						Valoraciones
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class=" nav-bar-button " href="https://learn.microsoft.com/es-es/shows/" data-bi-name="L1-navigation-link">
+						Programa
+					</a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!---->
+			</ul>
+		</nav>
+	
+				<span class="nav-bar-spacer"></span>
+				
+		<div class="nav-bar-search " id="ax-83" hidden="">
+			
+		<form class="nav-bar-search-form" method="GET" name="nav-bar-search-form" role="search" id="nav-bar-search-form" aria-label="Buscar" action="https://learn.microsoft.com/es-es/search/">
+			<div class="autocomplete" data-bi-name="autocomplete"><!---->
+			<div class="field-body control ">
+				<input role="combobox" maxlength="100" aria-autocomplete="list" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" id="site-search-input" data-test-id="site-search-input" class="autocomplete-input input input-sm
+						
+						" type="search" name="terms" aria-expanded="false" aria-owns="ax-84-listbox" aria-controls="ax-84-listbox" aria-activedescendant="" aria-label="Buscar" aria-describedby="ms--site-search-input-description" placeholder="Buscar" pattern=".*">
+
+				
+
+				<span aria-hidden="true" class="autocomplete-loader loader has-text-primary " hidden=""></span>
+
+				<span hidden="" id="ms--site-search-input-description">
+					Las sugerencias se filtrarán a medida que escriba
+				</span>
+			</div>
+
+			<ul role="listbox" id="ax-84-listbox" data-test-id="site-search-input-listbox" class="autocomplete-suggestions is-vertically-scrollable padding-xxs " aria-label="Sugerencias" hidden="">
+				
+				
+			</ul>
+		<!----></div>
+			<!-- mobile safari will not dispatch submit event unless there's a submit button that is not display:none -->
+			<button type="submit" class="visually-hidden" tabindex="-1" aria-hidden="true"></button>
+			<input name="category" hidden="" value="">
+			
+			
+		</form>
+	
+		</div>
+		
+					<div class="nav-bar-search">
+						<!-- hidden when the width drops to tablet -->
+						
+		<form class="nav-bar-search-form" method="GET" name="nav-bar-search-form" role="search" id="nav-bar-search-form-desktop" aria-label="Buscar" action="https://learn.microsoft.com/es-es/search/">
+			<div class="autocomplete" data-bi-name="autocomplete"><!---->
+			<div class="field-body control has-icons-left">
+				<input role="combobox" maxlength="100" aria-autocomplete="list" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" id="site-search-input-desktop" data-test-id="site-search-input-desktop" class="autocomplete-input input input-sm
+						control has-icons-left
+						" type="search" name="terms" aria-expanded="false" aria-owns="ax-85-listbox" aria-controls="ax-85-listbox" aria-activedescendant="" aria-label="Buscar" aria-describedby="ms--site-search-input-desktop-description" placeholder="Buscar" pattern=".*">
+
+				
+					<span aria-hidden="true" class="icon is-small is-left">
+						<span class="has-text-primary docon docon-search"></span>
+					</span>
+			  
+
+				<span aria-hidden="true" class="autocomplete-loader loader has-text-primary " hidden=""></span>
+
+				<span hidden="" id="ms--site-search-input-desktop-description">
+					Las sugerencias se filtrarán a medida que escriba
+				</span>
+			</div>
+
+			<ul role="listbox" id="ax-85-listbox" data-test-id="site-search-input-desktop-listbox" class="autocomplete-suggestions is-vertically-scrollable padding-xxs " aria-label="Sugerencias" hidden="">
+				
+				
+			</ul>
+		<!----></div>
+			<!-- mobile safari will not dispatch submit event unless there's a submit button that is not display:none -->
+			<button type="submit" class="visually-hidden" tabindex="-1" aria-hidden="true"></button>
+			<input name="category" hidden="" value="">
+			
+			
+		</form>
+	
+					</div>
+			  
+		<div class="nav-bar-search " hidden="">
+			<div class="nav-bar-search-form-expander">
+				<button id="form-expander" data-test-id="form-expander" class="nav-bar-button has-hover-underline " title="Buscar" aria-expanded="false" aria-controls="ax-83">
+					
+		<span class="is-visually-hidden-mobile"><!---->Buscar<!----></span>
+		<span class="icon margin-left-xxs" aria-hidden="true">
+			<span class="docon docon-search"></span>
+		</span>
+	
+				</button>
+			</div>
+		</div>
+	
+				
+		<div class="nav-bar-profile">
+			
+		<a class="docs-sign-in auth-status-determined not-authenticated" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#"> Iniciar sesión </a>
+	 
+		<div class="dropdown has-caret auth-status-determined authenticated">
+			<button class="dropdown-trigger button-reset" aria-controls="user-menu" aria-expanded="false" data-bi-name="L1-user-menu" aria-label="Su cuenta">
+				<figure class="image is-36x36">
+					<img class="has-body-background-medium border-radius-rounded" alt="" data-profile-property="avatarThumbnailUrl">
+				</figure>
+			</button>
+			<div class="dropdown-menu box justify-content-flex-start has-body-background" id="user-menu" data-bi-name="user-menu" role="menu">
+				<div class="media is-user-dir">
+					<div class="media-left">
+						<figure class="image is-48x48" aria-hidden="true">
+							<img class="has-body-background-medium border-radius-rounded" aria-labelledby="displayName" alt="" data-profile-property="avatarUrl">
+						</figure>
+					</div>
+					<div class="media-content">
+						<h2 class="title font-size-lg">
+							<span id="displayName" class="is-inline-truncated has-max-width-200" data-profile-property="displayName"></span>
+						</h2>
+						<p class="subtitle font-size-sm margin-bottom-none">
+							<span class="is-inline-truncated has-max-width-200" data-profile-property="upn"></span>
+						</p>
+					</div>
+				</div>
+				<ul class="padding-top-xs padding-bottom-xs">
+					<li class="padding-bottom-xs">
+						<a data-profile-property="profileUrl" href="https://learn.microsoft.com/es-es/users/me/activity/"><!---->Perfil<!----></a>
+					</li>
+					<li>
+						<a data-profile-property="settingsUrl" href="https://learn.microsoft.com/es-es/users/me/settings/"><!---->Configuración<!----></a>
+					</li>
+				</ul>
+				<div class="border-top padding-top-xs">
+					<a class="docs-sign-out" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#"><!---->Cerrar sesión<!----></a>
+				</div>
+			</div>
+		</div>
+	
+		</div>
+	
+			 <!----></div> <div class="nav-bar border-top is-hidden-mobile" data-test-id="secondary-nav-bar" data-bi-name="L2-header"><!----> 
+		<a class="nav-bar-button is-title has-hover-underline" itemprop="url" data-bi-name="L2-category-link" href="https://learn.microsoft.com/es-es/visualstudio/windows/">
+			<span>
+				IDE de Visual Studio
+				
+			</span>
+		</a>
+	 
+		
+		<nav class="nav-bar-nav" role="navigation" aria-label="Sitio">
+			<ul class="nav-bar-nav-list">
+				
+				<!---->
+				<li class="nav-bar-item">
+					<a data-test-id="header-link-editar" class="has-external-link-indicator nav-bar-button has-hover-underline " href="https://learn.microsoft.com/es-es/visualstudio/ide/index-writing-code/" data-bi-name="L2-navigation-link">
+						<span><!---->Editar<!----></span>
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a data-test-id="header-link-build" class="has-external-link-indicator nav-bar-button has-hover-underline " href="https://learn.microsoft.com/es-es/visualstudio/ide/compiling-and-building-in-visual-studio/" data-bi-name="L2-navigation-link">
+						<span><!---->Build<!----></span>
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a data-test-id="header-link-depurar" class="has-external-link-indicator nav-bar-button has-hover-underline " href="https://learn.microsoft.com/es-es/visualstudio/debugger/" data-bi-name="L2-navigation-link">
+						<span><!---->Depurar<!----></span>
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a data-test-id="header-link-prueba" class="has-external-link-indicator nav-bar-button has-hover-underline " href="https://learn.microsoft.com/es-es/visualstudio/test/" data-bi-name="L2-navigation-link">
+						<span><!---->Prueba<!----></span>
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a data-test-id="header-link-implementar" class="has-external-link-indicator nav-bar-button has-hover-underline " href="https://learn.microsoft.com/es-es/visualstudio/deployment/" data-bi-name="L2-navigation-link">
+						<span><!---->Implementar<!----></span>
+					</a>
+				</li>
+		  <!----> <li class="dropdown nav-bar-item">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button  has-hover-underline" aria-controls="ax-86" data-bi-name="L2-navigation-menu" value="undefined">
+			<span><!---->Tareas comunes<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-down-light expanded-indicator"></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-86" aria-label="Tareas comunes">
+			<!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/es-es/visualstudio/profiling/" data-bi-name="L2-navigation-link">
+						Mejorar el rendimiento
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/es-es/visualstudio/data-tools/" data-bi-name="L2-navigation-link">
+						Acceso a los datos
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/es-es/visualstudio/designers/designing-user-interfaces/" data-bi-name="L2-navigation-link">
+						Diseño de interfaces de usuario
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/es-es/azure/devops/" data-bi-name="L2-navigation-link">
+						DevOps
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/es-es/visualstudio/extensibility/" data-bi-name="L2-navigation-link">
+						Extender Visual Studio
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/es-es/visualstudio/version-control/" data-bi-name="L2-navigation-link">
+						Control de versiones
+					</a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!---->
+				<li class="nav-bar-item">
+					<a data-test-id="header-link-solución-de-problemas" class="has-external-link-indicator nav-bar-button has-hover-underline " href="https://learn.microsoft.com/es-es/troubleshoot/developer/visualstudio/" data-bi-name="L2-navigation-link">
+						<span><!---->Solución de problemas<!----></span>
+					</a>
+				</li>
+		  <!----> <li class="dropdown nav-bar-item">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button  has-hover-underline" aria-controls="ax-87" data-bi-name="L2-navigation-menu" value="undefined">
+			<span><!---->Recursos<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-down-light expanded-indicator"></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-87" aria-label="Recursos">
+			<!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://visualstudio.microsoft.com/" data-bi-name="L2-navigation-link">
+						visualstudio.microsoft.com
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://devblogs.microsoft.com/visualstudio/" data-bi-name="L2-navigation-link">
+						Blog de Visual Studio
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://www.visualstudio.com/downloads/" data-bi-name="L2-navigation-link">
+						Descargas
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/es-es/visualstudio/releases/2022/release-notes/" data-bi-name="L2-navigation-link">
+						Notas de la versión
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://www.visualstudio.com/vs/support/" data-bi-name="L2-navigation-link">
+						Soporte técnico
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://www.visualstudio.com/subscriptions/" data-bi-name="L2-navigation-link">
+						Suscripciones
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://marketplace.visualstudio.com/vs" data-bi-name="L2-navigation-link">
+						Marketplace
+					</a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!----> <li class="dropdown nav-bar-item" hidden="">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button  has-hover-underline" aria-controls="ax-88" data-bi-name="L2-navigation-menu" value="undefined">
+			<span><!---->Más<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-down-light expanded-indicator"></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-88" aria-label="Más">
+			<!---->
+				<li class="nav-bar-item" hidden="">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/es-es/visualstudio/ide/index-writing-code/" data-bi-name="L2-navigation-link">
+						Editar
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/es-es/visualstudio/ide/compiling-and-building-in-visual-studio/" data-bi-name="L2-navigation-link">
+						Build
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/es-es/visualstudio/debugger/" data-bi-name="L2-navigation-link">
+						Depurar
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/es-es/visualstudio/test/" data-bi-name="L2-navigation-link">
+						Prueba
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/es-es/visualstudio/deployment/" data-bi-name="L2-navigation-link">
+						Implementar
+					</a>
+				</li>
+		  <!----> <li class="dropdown nav-bar-item" hidden="">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button  " aria-controls="ax-89" data-bi-name="L2-navigation-menu" value="undefined">
+			<span><!---->Tareas comunes<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-right-light "></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-89" aria-label="Tareas comunes">
+			<!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/es-es/visualstudio/profiling/" data-bi-name="L2-navigation-link">
+						Mejorar el rendimiento
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/es-es/visualstudio/data-tools/" data-bi-name="L2-navigation-link">
+						Acceso a los datos
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/es-es/visualstudio/designers/designing-user-interfaces/" data-bi-name="L2-navigation-link">
+						Diseño de interfaces de usuario
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/es-es/azure/devops/" data-bi-name="L2-navigation-link">
+						DevOps
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/es-es/visualstudio/extensibility/" data-bi-name="L2-navigation-link">
+						Extender Visual Studio
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/es-es/visualstudio/version-control/" data-bi-name="L2-navigation-link">
+						Control de versiones
+					</a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!---->
+				<li class="nav-bar-item" hidden="">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/es-es/troubleshoot/developer/visualstudio/" data-bi-name="L2-navigation-link">
+						Solución de problemas
+					</a>
+				</li>
+		  <!----> <li class="dropdown nav-bar-item" hidden="">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button  " aria-controls="ax-90" data-bi-name="L2-navigation-menu" value="undefined">
+			<span><!---->Recursos<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-right-light "></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-90" aria-label="Recursos">
+			<!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://visualstudio.microsoft.com/" data-bi-name="L2-navigation-link">
+						visualstudio.microsoft.com
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://devblogs.microsoft.com/visualstudio/" data-bi-name="L2-navigation-link">
+						Blog de Visual Studio
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://www.visualstudio.com/downloads/" data-bi-name="L2-navigation-link">
+						Descargas
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://learn.microsoft.com/es-es/visualstudio/releases/2022/release-notes/" data-bi-name="L2-navigation-link">
+						Notas de la versión
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://www.visualstudio.com/vs/support/" data-bi-name="L2-navigation-link">
+						Soporte técnico
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://www.visualstudio.com/subscriptions/" data-bi-name="L2-navigation-link">
+						Suscripciones
+					</a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://marketplace.visualstudio.com/vs" data-bi-name="L2-navigation-link">
+						Marketplace
+					</a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!---->
+		</ul>
+	</li><!---->
+			</ul>
+		</nav>
+	
+		<span class="nav-bar-spacer"></span>
+		
+		<ol class="nav-bar-list">
+			 
+		<li class="nav-bar-item ">
+			<a data-test-id="navbar-primary-cta" class="button button-sm button-primary button-filled" href="https://visualstudio.microsoft.com/downloads/?cid=learn-navbar-download-cta" data-bi-name="L2-primary-cta">
+				Descarga de Visual Studio
+			</a>
+		</li>
+	
+		</ol>
+	 
+	 <!----></div> <!----></header>		</div>
+
+
+			<div id="content-header" class="content-header uhf-container has-padding has-default-focus border-bottom-none" data-bi-name="content-header">
+				<div class="content-header-controls margin-xxs margin-inline-sm-tablet">
+					<button type="button" class="contents-button button button-sm margin-right-xxs" data-bi-name="contents-expand" aria-haspopup="true" data-contents-button="">
+						<span class="icon"><span class="docon docon-menu" aria-hidden="true"></span></span>
+						<span class="contents-expand-title">
+Tabla de contenido						</span>
+					</button>
+					<button type="button" class="ap-collapse-behavior ap-expanded button button-sm" data-bi-name="ap-collapse" aria-controls="action-panel">
+						<span class="icon"><span class="docon docon-exit-mode" aria-hidden="true"></span></span>
+						<span>Salir del modo de enfoque</span>
+					</button>
+				</div>
+			</div>
+
+		<div id="disclaimer-holder" class="has-overflow-hidden has-default-focus">
+			<!-- liquid-tag banners sectional -->
+		</div>
+	</div>
+
+	<div class="mainContainer  uhf-container has-default-focus" data-bi-name="body">
+
+		<div class="columns has-large-gaps is-gapless-mobile ">
+
+			<div id="left-container" class="left-container is-hidden-mobile column is-one-third-tablet is-one-quarter-desktop">
+				<nav id="affixed-left-container" class="margin-top-sm-tablet position-sticky display-flex flex-direction-column" role="navigation" aria-label="Principal" data-bi-name="left toc" style="top: 24px; height: calc(100vh - 370px); max-height: 11848.5px;"><div class="moniker-picker2" data-bi-name="moniker-picker"><!---->
+		<span class="label margin-bottom-xxs"><!---->Versión<!----></span>
+		<div class="dropdown margin-bottom-xxs" role="navigation" aria-label="Versión">
+			<button class="dropdown-trigger justify-content-flex-start button-block button button-sm inner-focus" aria-expanded="false" data-autofocus="" aria-controls="ax-94">
+				<span class="has-text-overflow-ellipsis"><!---->Visual Studio 2019<!----></span>
+				<span class="dropdown-button-chevron color-text" aria-hidden="true">
+					<span class="icon">
+						<span class="docon docon-chevron-down-light expanded-indicator"></span>
+					</span>
+				</span>
+			</button>
+			<ul class="dropdown-menu is-full-width is-vertically-scrollable" id="ax-94" aria-label="Visual Studio">
+						<!----><!---->
+		<li>
+			<a class="preserve-view button button-sm button-clear button-block text-decoration-none inner-focus justify-content-flex-start has-text-wrap is-text-left" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2022"><!---->2022<!----></a>
+		</li>
+	<!----><!----><!---->
+		<li>
+			<a class="preserve-view button button-sm button-clear button-block text-decoration-none inner-focus justify-content-flex-start has-text-wrap is-text-left" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019"><!---->2019<!----></a>
+		</li>
+	<!----><!---->
+						<li>
+									<a class="button button-sm button-clear button-block text-decoration-none border-top inner-focus justify-content-flex-start" href="https://learn.microsoft.com/previous-versions/visualstudio"><!---->Versiones anteriores<!----></a>
+							  </li>
+				  </ul>
+		</div>
+	<!----></div><form action="javascript:" role="search" aria-label="Buscar" class="margin-bottom-xxs"><label class="visually-hidden" for="ax-91">Buscar</label><div class="autocomplete display-block" data-bi-name="autocomplete"><!---->
+			<div class="field-body control has-icons-left">
+				<input role="combobox" maxlength="100" aria-autocomplete="list" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" id="ax-91" data-test-id="ax-91" class="autocomplete-input input input-sm
+						control has-icons-left
+						width-full" type="text" aria-expanded="false" aria-owns="ax-92-listbox" aria-controls="ax-92-listbox" aria-activedescendant="" aria-describedby="ms--ax-91-description" placeholder="Filtrar por título" pattern=".*">
+
+				
+					<span aria-hidden="true" class="icon is-small is-left">
+						<span class="has-text-primary docon docon-filter-settings"></span>
+					</span>
+			  
+
+				<span aria-hidden="true" class="autocomplete-loader loader has-text-primary " hidden=""></span>
+
+				<span hidden="" id="ms--ax-91-description">
+					Las sugerencias se filtrarán a medida que escriba
+				</span>
+			</div>
+
+			<ul role="listbox" id="ax-92-listbox" data-test-id="ax-91-listbox" class="autocomplete-suggestions is-vertically-scrollable padding-xxs " aria-label="Sugerencias" hidden="">
+				
+				
+			</ul>
+		<!----></div></form><ul class="tree table-of-contents is-vertically-scrollable flex-grow-1 flex-shrink-1" role="tree" aria-label="Tabla de contenido" data-bi-name="tree" data-is-collapsible="true"><li role="none"><a aria-setsize="4" aria-level="1" aria-posinset="1" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/?view=vs-2019">Tutoriales de C#</a></li><li class="tree-item" aria-setsize="4" aria-level="1" aria-posinset="2" role="treeitem" tabindex="-1" id="title-2-1" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Información general</span></li><li class="tree-item is-expanded" aria-setsize="4" aria-level="1" aria-posinset="3" role="treeitem" tabindex="-1" id="title-3-1" aria-expanded="true"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Creación de una aplicación</span><ul class="tree-group" role="group"><li class="tree-item is-expanded" aria-setsize="6" aria-level="2" aria-posinset="1" role="treeitem" tabindex="-1" id="title-3-1_1-2" aria-expanded="true"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Crear la primera aplicación de C#</span><ul class="tree-group" role="group"><li role="none"><a aria-setsize="2" aria-level="3" aria-posinset="1" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-console?view=vs-2019">creación de una aplicación de consola en C#</a></li><li role="none"><a aria-setsize="2" aria-level="3" aria-posinset="2" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-console-part-2?view=vs-2019">ampliación de una aplicación de consola en C#</a></li></ul></li><li role="none"><a aria-setsize="6" aria-level="2" aria-posinset="2" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2019">Creación de una aplicación web</a></li><li role="none"><a aria-setsize="6" aria-level="2" aria-posinset="3" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-wasdk?view=vs-2019">Creación de una aplicación del SDK de Aplicaciones para Windows</a></li><li role="none"><a aria-setsize="6" aria-level="2" aria-posinset="4" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-uwp?view=vs-2019">Creación de una aplicación UWP</a></li><li role="none"><a aria-setsize="6" aria-level="2" aria-posinset="5" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-wpf?view=vs-2019">Crear una aplicación WPF</a></li><li class="tree-item is-expanded" aria-setsize="6" aria-level="2" aria-posinset="6" role="treeitem" tabindex="-1" id="title-3-1_6-2" aria-expanded="true"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Crear tu primera aplicación de Windows Forms</span><ul class="tree-group" role="group"><li role="none"><a aria-setsize="4" aria-level="3" aria-posinset="1" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://learn.microsoft.com/es-es/visualstudio/ide/create-csharp-winform-visual-studio?toc=%2Fvisualstudio%2Fget-started%2Fcsharp%2Ftoc.json&amp;bc=%2Fvisualstudio%2Fget-started%2Fcsharp%2Fbreadcrumb%2Ftoc.json&amp;view=vs-2019">Creación de una aplicación simple de Windows&nbsp;Forms</a></li><li class="tree-item" aria-setsize="4" aria-level="3" aria-posinset="2" role="treeitem" tabindex="-1" id="title-3-1_6-2_2-3" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Tutorial 1: Creación de un visor de imágenes (C#)</span></li><li class="tree-item" aria-setsize="4" aria-level="3" aria-posinset="3" role="treeitem" tabindex="-1" id="title-3-1_6-2_3-3" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Tutorial 2: Creación de una prueba matemática cronometrada (C#)</span></li><li class="tree-item" aria-setsize="4" aria-level="3" aria-posinset="4" role="treeitem" tabindex="-1" id="title-3-1_6-2_4-3" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Tutorial 3: Creación de un juego de formar parejas (C#)</span></li></ul></li></ul></li><li class="tree-item is-expanded" aria-setsize="4" aria-level="1" aria-posinset="4" role="treeitem" tabindex="-1" id="title-4-1" aria-expanded="true"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Conocer Visual Studio</span><ul class="tree-group" role="group"><li role="none"><a aria-setsize="8" aria-level="2" aria-posinset="1" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/run-program?view=vs-2019">Ejecutar un programa</a></li><li role="none"><a aria-setsize="8" aria-level="2" aria-posinset="2" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://learn.microsoft.com/es-es/visualstudio/get-started/tutorial-open-project-from-repo?toc=%2Fvisualstudio%2Fget-started%2Fcsharp%2Ftoc.json&amp;bc=%2Fvisualstudio%2Fget-started%2Fcsharp%2Fbreadcrumb%2Ftoc.json&amp;view=vs-2019">Abrir un proyecto desde un repositorio</a></li><li role="none"><a aria-setsize="8" aria-level="2" aria-posinset="3" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-editor?view=vs-2019">Escribir y editar código</a></li><li role="none"><a aria-setsize="8" aria-level="2" aria-posinset="4" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://learn.microsoft.com/es-es/visualstudio/ide/compiling-and-building-in-visual-studio?view=vs-2019">Compilar y generar</a></li><li role="none"><a aria-setsize="8" aria-level="2" aria-posinset="5" role="treeitem" tabindex="0" class="tree-item is-leaf has-external-link-indicator is-selected" data-bi-name="tree-leaf" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019" aria-current="page">Depurar el código</a></li><li role="none"><a aria-setsize="8" aria-level="2" aria-posinset="6" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://learn.microsoft.com/es-es/visualstudio/test/getting-started-with-unit-testing?toc=%2Fvisualstudio%2Fget-started%2Fcsharp%2Ftoc.json&amp;bc=%2Fvisualstudio%2Fget-started%2Fcsharp%2Fbreadcrumb%2Ftoc.json&amp;view=vs-2019">Pruebas unitarias</a></li><li role="none"><a aria-setsize="8" aria-level="2" aria-posinset="7" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://learn.microsoft.com/es-es/visualstudio/deployment/?view=vs-2019">Implementar el proyecto</a></li><li role="none"><a aria-setsize="8" aria-level="2" aria-posinset="8" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://learn.microsoft.com/es-es/visualstudio/data-tools/create-a-sql-database-by-using-a-designer?toc=%2Fvisualstudio%2Fget-started%2Fcsharp%2Ftoc.json&amp;bc=%2Fvisualstudio%2Fget-started%2Fcsharp%2Fbreadcrumb%2Ftoc.json&amp;view=vs-2019">Acceder a datos</a></li></ul></li></ul><div class="padding-xxs padding-none-tablet border-top border-bottom-tablet"><button class="button button-sm button-clear button-block inner-focus justify-content-flex-start-tablet" data-bi-name="download-pdf" rel="nofollow"><!---->
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-dictionary-download"></span>
+			</span>
+			<span><!---->Descargar PDF<!----></span>
+		<!----></button></div></nav>
+			</div>
+
+			<!-- .primary-holder -->
+			<section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+				<!--div.columns -->
+				<div class="columns is-gapless-mobile has-large-gaps ">
+
+
+					<div id="main-column" class="column  is-full is-8-desktop">
+
+						<main id="main" class="" role="main" data-bi-name="content" lang="es-es" dir="ltr">
+							<!-- article-header -->
+							<div id="article-header" class="background-color-body margin-top-sm-tablet margin-bottom-xs display-none-print">
+								<div class="display-flex align-items-center ">
+									<details id="article-header-breadcrumbs-overflow-popover" class="popover" data-for="article-header-breadcrumbs" hidden="">
+										<summary class="button button-clear button-primary button-sm inner-focus" aria-label="Todas las rutas de navegación">
+											<span class="icon">
+												<span class="docon docon-more"></span>
+											</span>
+										</summary>
+										<div id="article-header-breadcrumbs-overflow" class="popover-content padding-none"><!---->
+			<nav>
+				<ol class="list-style-none">
+					<!---->
+								<li class="line-clamp-1">
+									<a class="display-block has-inner-focus padding-inline-xs padding-block-xxs border-radius font-size-sm" href="https://learn.microsoft.com/es-es/?view=vs-2019">
+										Learn
+									</a>
+								</li>
+							<!----><!---->
+								<li class="line-clamp-1">
+									<a class="display-block has-inner-focus padding-inline-xs padding-block-xxs border-radius font-size-sm" href="https://learn.microsoft.com/es-es/visualstudio/windows/?view=vs-2019">
+										Visual Studio
+									</a>
+								</li>
+							<!---->
+				</ol>
+			</nav>
+			
+		<!----></div>
+									</details>
+
+									<bread-crumbs id="article-header-breadcrumbs" data-test-id="article-header-breadcrumbs" class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop margin-left-negative-xxs padding-left-xxs" style="display: block; white-space: nowrap; overflow: hidden;"><!---->
+			<nav>
+				<ol class="breadcrumbs">
+					<!---->
+								<li class="breadcrumbs-item" data-bread-crumbs-collapse-target="">
+									<a href="https://learn.microsoft.com/es-es/?view=vs-2019"><!---->Learn<!----></a>
+								</li>
+							<!----><!---->
+								<li class="breadcrumbs-item" data-bread-crumbs-collapse-target="" style="">
+									<a href="https://learn.microsoft.com/es-es/visualstudio/windows/?view=vs-2019" style=""><!---->Visual Studio<!----></a>
+								</li>
+							<!---->
+				</ol>
+			</nav>
+		<!----></bread-crumbs>
+
+									<div id="article-header-page-actions" class="margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch">
+
+										<a id="lang-link-tablet" class="button button-primary button-clear button-sm display-none display-inline-flex-tablet" title="Leer en inglés" data-bi-name="language-toggle" data-read-in-link="" href="https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019" data-bi="{&quot;cN&quot;:&quot;language-toggle&quot;,&quot;value&quot;:&quot;off&quot;}">
+											<span class="icon margin-none" aria-hidden="true" data-read-in-link-icon="">
+												<span class="docon docon-locale-globe"></span>
+											</span>
+											<span class="is-visually-hidden" data-read-in-link-text="">Leer en inglés</span>
+										</a>
+
+											<button type="button" class="collection button button-clear button-sm button-primary display-none display-inline-flex-tablet" data-list-type="collection" data-bi-name="collection" title="Agregar Tutorial: Depurar código de C# - Visual Studio (Windows) | Microsoft Learn a una colección" data-pressed="false">
+												<span class="icon margin-none" aria-hidden="true">
+													<span class="docon docon-circle-addition"></span>
+												</span>
+												<span class="collection-status is-visually-hidden">Sumar</span>
+											</button>
+										
+
+										
+
+
+										
+										<details class="popover popover-right" id="article-header-page-actions-overflow">
+											<summary class="justify-content-flex-start button button-clear button-sm button-primary" aria-label="Más acciones">
+												<span class="icon" aria-hidden="true">
+													<span class="docon docon-more-vertical"></span>
+												</span>
+											</summary>
+											<div class="popover-content padding-none">
+													<button data-page-action-item="overflow-mobile" type="button" class="justify-content-flex-start button-block button-sm has-inner-focus button button-clear display-none-tablet" data-bi-name="contents-expand" data-contents-button="" data-popover-close="">
+														<span class="icon">
+															<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+														</span>
+															<span class="contents-expand-title">Tabla de contenido</span>
+													</button>
+
+												<a id="lang-link-overflow" class="justify-content-flex-start button-sm has-inner-focus button button-clear button-block display-none-tablet" title="Leer en inglés" data-bi-name="language-toggle" data-page-action-item="overflow-mobile" data-check-hidden="true" data-read-in-link="" href="https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019" data-bi="{&quot;cN&quot;:&quot;language-toggle&quot;,&quot;value&quot;:&quot;off&quot;}">
+													<span class="icon" aria-hidden="true" data-read-in-link-icon="">
+														<span class="docon docon-locale-globe"></span>
+													</span>
+													<span data-read-in-link-text="">Leer en inglés</span>
+												</a>
+
+													<button type="button" class="collection justify-content-flex-start button button-clear button-sm has-inner-focus button-block display-none-tablet" data-list-type="collection" data-bi-name="collection" title="Agregar Tutorial: Depurar código de C# - Visual Studio (Windows) | Microsoft Learn a una colección" data-page-action-item="overflow-mobile" data-check-hidden="true" data-popover-close="" data-pressed="false">
+														<span class="icon" aria-hidden="true">
+															<span class="docon docon-circle-addition"></span>
+														</span>
+														<span class="collection-status">Sumar</span>
+													</button>
+
+
+													<button class="button button-block button-clear button-sm justify-content-flex-start has-inner-focus" title="Imprimir" type="button" aria-label="Imprimir" data-bi-name="print" data-page-action-item="overflow-all" data-popover-close="" data-print-page="" data-check-hidden="true">
+														<span class="icon" aria-hidden="true">
+															<span class="docon docon-print"></span>
+														</span>
+														<span>Imprimir</span>
+													</button>
+
+													<div aria-hidden="true" class="margin-none
+														border-top" data-page-action-item="overflow-all"></div>
+
+													
+														<a class="button button-clear button-sm has-inner-focus button-block text-decoration-none justify-content-flex-start share-twitter" data-bi-name="twitter" data-page-action-item="overflow-all" href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Flearn.microsoft.com%2Fes-es%2Fvisualstudio%2Fget-started%2Fcsharp%2Ftutorial-debugger%3Fview%3Dvs-2019%26WT.mc_id%3Dtwitter&amp;text=%C2%A1Hoy%20he%20completado%20%22Tutorial%3A%20Depurar%20c%C3%B3digo%20de%20C%23%20-%20Visual%20Studio%20(Windows)%20%7C%20Microsoft%20Learn%22!%20Me%20llena%20de%20orgullo%20celebrar%20este%20logro%20y%20espero%20que%20esto%20lo%20inspire%20para%20que%20comience%20su%20propio%20recorrido%20en%20%40MicrosoftLearn.&amp;tw_p=tweetbutton&amp;url=https%3A%2F%2Flearn.microsoft.com%2Fes-es%2Fvisualstudio%2Fget-started%2Fcsharp%2Ftutorial-debugger%3Fview%3Dvs-2019%26WT.mc_id%3Dtwitter">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-twitter"></span>
+															</span>
+															<span>Twitter</span>
+														</a>
+														<a class="button button-clear button-sm has-inner-focus button-block text-decoration-none justify-content-flex-start share-linkedin" data-bi-name="linkedin" data-page-action-item="overflow-all" href="https://www.linkedin.com/feed/?shareActive=true&amp;text=%C2%A1Hoy%20he%20completado%20%22Tutorial%3A%20Depurar%20c%C3%B3digo%20de%20C%23%20-%20Visual%20Studio%20(Windows)%20%7C%20Microsoft%20Learn%22!%20Me%20llena%20de%20orgullo%20celebrar%20este%20logro%20y%20espero%20que%20esto%20lo%20inspire%20para%20que%20comience%20su%20propio%20recorrido%20en%20%40MicrosoftLearn.%0A%0D%0Ahttps%3A%2F%2Flearn.microsoft.com%2Fes-es%2Fvisualstudio%2Fget-started%2Fcsharp%2Ftutorial-debugger%3Fview%3Dvs-2019%26WT.mc_id%3Dlinkedin">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-linkedin"></span>
+															</span>
+															<span>LinkedIn</span>
+														</a>
+														<a class="button button-clear button-sm button-block has-inner-focus text-decoration-none justify-content-flex-start share-facebook" data-bi-name="facebook" data-page-action-item="overflow-all" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flearn.microsoft.com%2Fes-es%2Fvisualstudio%2Fget-started%2Fcsharp%2Ftutorial-debugger%3Fview%3Dvs-2019%26WT.mc_id%3Dfacebook">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-facebook"></span>
+															</span>
+															<span>Facebook</span>
+														</a>
+														<a class="button button-clear button-sm button-block has-inner-focus text-decoration-none justify-content-flex-start share-email" data-bi-name="email" data-page-action-item="overflow-all" href="mailto:?subject=%5BArt%C3%ADculo%20compartido%5D%20Tutorial%3A%20Depurar%20c%C3%B3digo%20de%20C%23%20-%20Visual%20Studio%20(Windows)%20%7C%20Microsoft%20Learn&amp;body=%C2%A1Hoy%20he%20completado%20%22Tutorial%3A%20Depurar%20c%C3%B3digo%20de%20C%23%20-%20Visual%20Studio%20(Windows)%20%7C%20Microsoft%20Learn%22!%20Me%20llena%20de%20orgullo%20celebrar%20este%20logro%20y%20espero%20que%20esto%20lo%20inspire%20para%20que%20comience%20su%20propio%20recorrido%20en%20%40MicrosoftLearn.%0A%0D%0Ahttps%3A%2F%2Flearn.microsoft.com%2Fes-es%2Fvisualstudio%2Fget-started%2Fcsharp%2Ftutorial-debugger%3Fview%3Dvs-2019%26WT.mc_id%3Demail">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-mail-message-fill"></span>
+															</span>
+															<span>Correo electrónico</span>
+														</a>
+												
+											</div>
+										</details>
+										
+									</div>
+								</div>
+							</div>
+							<!-- end article-header -->
+
+
+							<div>
+								<button type="button" class="border contents-button button button-clear button-sm is-hidden-tablet has-inner-focus" data-bi-name="contents-expand" data-contents-button="" hidden="">
+									<span class="icon">
+										<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+									</span>
+										<span class="contents-expand-title">Tabla de contenido</span>
+								</button>
+							</div>
+
+							<!-- end mobile-contents button  -->
+
+							<div class="content ">
+
+
+								<h1 id="tutorial-learn-to-debug-c-code-using-visual-studio">Tutorial: Información sobre cómo depurar código de C# con Visual Studio</h1>
+
+
+									<div class="display-flex justify-content-space-between align-items-center flex-wrap-wrap page-metadata-container">
+										<div class="margin-right-xxs">
+											<ul class="metadata page-metadata" data-bi-name="page info" lang="es-es" dir="ltr">
+													<li>
+Artículo													</li>
+
+													<li class="visibility-hidden-visual-diff">
+														<time class="" data-article-date="" aria-label="Fecha de revisión del artículo" datetime="2023-10-25T08:00:00.000Z" data-article-date-source="calculated">25/10/2023</time>
+													</li>
+														<li class="contributors-holder display-none-print">
+															<button aria-label="Ver todos los colaboradores" class="contributors-button link-button" data-bi-name="contributors" title="Ver todos los colaboradores">
+																	12&nbsp;colaboradores
+															</button>
+														</li>
+											</ul>
+										</div>
+
+<div id="user-feedback" class="margin-block-xxs display-none-print" data-hide-on-archived="">
+	<button id="user-feedback-button" data-test-id="conceptual-feedback-button" class="button button-sm button-clear button-primary" type="button" data-bi-name="user-feedback-button" data-user-feedback-button="">
+		<span class="icon" aria-hidden="true">
+			<span class="docon docon-like"></span>
+		</span>
+		<span>Comentarios</span>
+	</button>
+</div>
+									</div>
+
+									<div id="ms--inline-notifications" data-bi-name="inline-notification"></div>
+
+										<nav id="center-doc-outline" class="doc-outline display-none-print margin-bottom-sm" data-bi-name="intopic toc" role="navigation" aria-label="En este artículo"><!----> 
+		<h2 id="ms--in-this-article" class="title is-6 margin-block-xs"><!---->En este artículo<!----></h2>
+		<ol id="content-well-in-this-article-list" class="border-left padding-left-xxs" aria-live="polite" aria-relevant="additions">
+			<!---->
+					<li class="">
+						<a href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#prerequisites"><!---->Requisitos previos<!----></a>
+					</li>
+				<!---->
+					<li class="">
+						<a href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#create-a-project"><!---->Crear un proyecto<!----></a>
+					</li>
+				<!---->
+					<li class="">
+						<a href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#create-the-application"><!---->Crear la aplicación<!----></a>
+					</li>
+				<!---->
+					<li class="">
+						<a href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#start-the-debugger"><!---->Inicio del depurador<!----></a>
+					</li>
+				<!---->
+					<li class="expandable">
+						<a href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#set-a-breakpoint-and-start-the-debugger"><!---->Establecer un punto de interrupción e iniciar el depurador<!----></a>
+					</li>
+				<!---->
+					<li class="expandable">
+						<a href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#navigate-code-and-inspect-data-by-using-data-tips"><!---->Navegación por el código e inspección de los datos mediante sugerencias de datos<!----></a>
+					</li>
+				<!---->
+					<li class="expandable">
+						<a href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#navigate-code-using-run-to-click"><!---->Navegación por el código con Ejecutar hasta clic<!----></a>
+					</li>
+				<!---->
+					<li class="expandable">
+						<a href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#restart-your-app-quickly"><!---->Reiniciar la aplicación rápidamente<!----></a>
+					</li>
+				<!---->
+					<li class="expandable">
+						<a href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#inspect-variables-with-the-autos-and-locals-windows"><!---->Inspeccionar variables con las ventanas Automático y Variables locales<!----></a>
+					</li>
+				<!---->
+					<li class="expandable">
+						<a href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#set-a-watch"><!---->Establecer una inspección<!----></a>
+					</li>
+				<!---->
+					<li class="expandable">
+						<a href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#examine-the-call-stack"><!---->Examinar la pila de llamadas<!----></a>
+					</li>
+				<!---->
+					<li class="expandable">
+						<a href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#change-the-execution-flow"><!---->Cambio del flujo de ejecución<!----></a>
+					</li>
+				<!---->
+					<li class="expandable">
+						<a href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#next-steps"><!---->Pasos siguientes<!----></a>
+					</li>
+				<!---->
+		</ol>
+	 
+		<button type="button" aria-expanded="false" data-show-more="" class="link-button font-weight-semibold font-size-sm margin-top-xxs margin-left-xs" aria-controls="content-well-in-this-article-list" data-title="Mostrar 9 más" data-bi-name="show-more-btn">
+			<span class="show-more-text "><!---->Mostrar 9&nbsp;más<!----></span>
+			
+		</button>
+	 <!----></nav>
+
+								<!-- <content> -->
+									<p><strong>Se aplica a:</strong><img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/yes-icon.png" alt="yes" data-linktype="relative-path">Visual&nbsp;Studio <img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/no-icon.png" alt="no" data-linktype="relative-path">Visual&nbsp;Studio para Mac <img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/no-icon.png" alt="no" data-linktype="relative-path">Visual&nbsp;Studio&nbsp;Code</p>
+<p>En este artículo se describen las características del depurador de Visual Studio en un tutorial paso a paso. Si quiere ahondar en las características del depurador, vea <a href="https://learn.microsoft.com/es-es/visualstudio/debugger/debugger-feature-tour?view=vs-2019" data-linktype="relative-path">Primer vistazo al depurador</a>. Normalmente, <em>depurar una aplicación</em> significa ejecutar la aplicación con el depurador activado. Al hacer esta tarea, el depurador ofrece muchas formas de ver lo que hace el código durante la ejecución. Esto permite revisar el código y fijarse en los valores almacenados en variables, establecer inspecciones en ellas para ver cuándo cambian los valores, examinar la ruta de ejecución del código, ver si una rama de código está en funcionamiento, etc. Si este ejercicio es la primera vez que intenta depurar código, le recomendamos que lea <a href="https://learn.microsoft.com/es-es/visualstudio/debugger/debugging-absolute-beginners?view=vs-2019" data-linktype="relative-path">Depuración para principiantes sin experiencia</a> antes de continuar con este artículo.</p>
+<p>Aunque la aplicación de demostración está en C#, la mayoría de las características son aplicables a C++, Visual&nbsp;Basic, F#, Python, JavaScript y otros lenguajes compatibles con Visual&nbsp;Studio (F# no admite Editar y continuar. F# y JavaScript no admiten la ventana <strong>Automático</strong>). Las capturas de pantalla son de código C#.</p>
+<p>En este tutorial va a:</p>
+<div class="checklist">
+<ul>
+<li>Iniciar el depurador y llegar a puntos de interrupción</li>
+<li>Conocer los comandos para analizar el código en el depurador</li>
+<li>Inspeccionar variables en la información sobre datos y las ventanas del depurador</li>
+<li>Examinar la pila de llamadas</li>
+</ul>
+</div>
+<div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#prerequisites" aria-label="Sección titulada: Requisitos previos"></a><h2 id="prerequisites" class="heading-anchor">Requisitos previos</h2></div>
+<div data-moniker="vs-2022">
+<p>Debe tener instalados Visual&nbsp;Studio&nbsp;2022 y la carga de trabajo <strong>Desarrollo de escritorio de .NET</strong>.</p>
+</div>
+<div data-moniker="vs-2019">
+<p>Debe tener instalados Visual&nbsp;Studio&nbsp;2019 y la carga de trabajo <strong>Desarrollo multiplataforma de .NET Core</strong>.</p>
+</div>
+<p>Si todavía no ha instalado Visual Studio, vaya a la página de <a href="https://visualstudio.microsoft.com/downloads/?cid=learn-onpage-download-cta" data-linktype="external">descargas de Visual Studio</a> para instalarlo de forma gratuita.</p>
+<div data-moniker="vs-2019">
+<p>Si tiene que instalar la carga de trabajo pero ya tiene Visual Studio, vaya a <strong>Herramientas</strong>&gt;<strong>Obtener herramientas y características…</strong> y se abrirá el Instalador de Visual Studio. Se iniciará el Instalador de Visual Studio. Elija la carga de trabajo <strong>Desarrollo multiplataforma de .NET Core</strong> y, después, <strong>Modificar</strong>.</p>
+</div>
+<div data-moniker="vs-2022">
+<p>Si ya tiene instalado Visual&nbsp;Studio, pero la carga de trabajo <strong>Desarrollo de escritorio de .NET</strong> no lo está, vaya a <strong>Herramientas</strong>&gt;<strong>Get Tools and Features...</strong> (Obtener herramientas y características...) para iniciar el Instalador de Visual&nbsp;Studio. En el Instalador de Visual&nbsp;Studio, elija la carga de trabajo <strong>Desarrollo de escritorio de .NET</strong> y, luego, seleccione <strong>Modificar</strong>.</p>
+</div>
+<div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#create-a-project" aria-label="Sección titulada: Crear un proyecto"></a><h2 id="create-a-project" class="heading-anchor">Crear un proyecto</h2></div>
+<p>En primer lugar, cree un proyecto de aplicación de consola de .NET Core. En el tipo de proyecto se incluyen todos los archivos de plantilla que necesita, sin necesidad de agregar nada más.</p>
+<ol>
+<li><p>Abierto Visual Studio. Si la ventana de inicio no está abierta, seleccione <strong>Archivo</strong>&gt;<strong>Ventana de inicio</strong>.</p>
+</li>
+<li><p>En la ventana de inicio, seleccione <strong>Crear un proyecto</strong>.</p>
+</li>
+</ol>
+<div data-moniker="vs-2019">
+<ol start="3">
+<li><p>En el cuadro de búsqueda de la ventana <strong>Crear un proyecto</strong>, escriba <em>consola</em>. Seguidamente, elija <strong>C#</strong> en la lista de lenguajes y luego, <strong>Windows</strong> en la lista de plataformas.</p>
+<p>Después de aplicar los filtros de lenguaje y plataforma, elija la plantilla <strong>Aplicación de consola</strong> para .NET&nbsp;Core y luego seleccione <strong>Siguiente</strong>.</p>
+<p><img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/get-started-create-console-project.png" alt="Screenshot of the C# template for the Console App." data-linktype="relative-path"></p>
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span> Nota</p>
+<p>Si no ve la plantilla <strong>Aplicación de consola</strong>, puede instalarla desde la ventana <strong>Crear un proyecto</strong>. En el mensaje <strong>¿No encuentra lo que busca?</strong> , elija el vínculo <strong>Instalar más herramientas y características</strong>. Luego, en el Instalador de Visual&nbsp;Studio, elija la carga de trabajo <strong>Desarrollo multiplataforma de .NET&nbsp;Core</strong>.</p>
+</div>
+</li>
+<li><p>En la ventana <strong>Configurar el nuevo proyecto</strong>, escriba <em>GetStartedDebugging</em> en el cuadro <strong>Nombre del proyecto</strong>. Después, seleccione <strong>Siguiente</strong>.</p>
+</li>
+<li><p>Seleccione la plataforma de destino recomendada (compatibilidad con .NET 8.0 o a largo plazo) y, a continuación, seleccione <strong>Crear</strong>.</p>
+</li>
+</ol>
+</div>
+<div data-moniker="vs-2022">
+<ol start="3">
+<li><p>En el cuadro de búsqueda de la ventana <strong>Crear un proyecto</strong>, escriba <em>consola</em>. Seguidamente, elija <strong>C#</strong> en la lista de lenguajes y luego, <strong>Windows</strong> en la lista de plataformas.</p>
+<p>Después de aplicar los filtros de lenguaje y plataforma, elija la plantilla <strong>Aplicación de consola</strong> y, luego, seleccione <strong>Siguiente</strong>.</p>
+<p><span class="mx-imgBorder"><img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/get-started-create-console-project(1).png" alt="Screenshot of the &#39;Console Application&#39; template in the &#39;Create a new project&#39; window of Visual Studio 2022." data-linktype="relative-path"></span>
+</p>
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span> Nota</p>
+<p>Si no ve la plantilla <strong>Aplicación de consola</strong>, puede instalarla desde la ventana <strong>Crear un proyecto</strong>. En el mensaje <strong>¿No encuentra lo que busca?</strong> , elija el vínculo <strong>Instalar más herramientas y características</strong>. A continuación, en el Instalador de Visual&nbsp;Studio, elija la carga de trabajo <strong>Desarrollo de escritorio de .NET</strong>.</p>
+</div>
+</li>
+<li><p>En la ventana <strong>Configurar el nuevo proyecto</strong>, escriba <em>GetStartedDebugging</em> en el cuadro <strong>Nombre del proyecto</strong>. Después, seleccione <strong>Siguiente</strong>.</p>
+</li>
+<li><p>En la ventana <strong>Información adicional</strong>, asegúrese de que esté seleccionado <strong>.NET&nbsp;8.0</strong> en el menú desplegable <strong>Marco</strong> y, luego, seleccione <strong>Crear</strong>.</p>
+</li>
+</ol>
+</div>
+<p>Visual&nbsp;Studio se abre en el nuevo proyecto.</p>
+<div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#create-the-application" aria-label="Sección titulada: Crear la aplicación"></a><h2 id="create-the-application" class="heading-anchor">Crear la aplicación</h2></div>
+<p>En <em>Program.cs</em>, reemplace todo el código predeterminado por el código siguiente:</p>
+<div class="codeHeader" id="code-try-0" data-bi-name="code-header"><span class="language">C#</span>
+		<button type="button" class="action position-relative display-none-print" data-bi-name="copy">
+			<span class="icon margin-right-xxs" aria-hidden="true">
+				<span class="docon docon-edit-copy"></span>
+			</span>
+			<span>Copiar</span>
+			<div class="successful-copy-alert position-absolute right-0 top-0 left-0 bottom-0 display-flex align-items-center justify-content-center has-text-success-invert has-background-success is-transparent" aria-hidden="true">
+				<span class="icon font-size-lg">
+					<span class="docon docon-check-mark"></span>
+				</span>
+			</div>
+		</button>
+	</div><pre class="has-inner-focus"><code class="lang-csharp" data-author-content="using System;
+
+class ArrayExample
+{
+   static void Main()
+   {
+      char[] letters = { &#39;f&#39;, &#39;r&#39;, &#39;e&#39;, &#39;d&#39;, &#39; &#39;, &#39;s&#39;, &#39;m&#39;, &#39;i&#39;, &#39;t&#39;, &#39;h&#39;};
+      string name = &quot;&quot;;
+      int[] a = new int[10];
+      for (int i = 0; i &lt; letters.Length; i++)
+      {
+         name += letters[i];
+         a[i] = i + 1;
+         SendMessage(name, a[i]);
+      }
+      Console.ReadKey();
+   }
+
+   static void SendMessage(string name, int msg)
+   {
+      Console.WriteLine(&quot;Hello, &quot; + name + &quot;! Count to &quot; + msg);
+   }
+}
+"><span><span class="hljs-keyword">using</span> System;
+
+<span class="hljs-keyword">class</span> <span class="hljs-title">ArrayExample</span>
+{
+   <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)</span>
+   {
+      <span class="hljs-built_in">char</span>[] letters = { <span class="hljs-string">'f'</span>, <span class="hljs-string">'r'</span>, <span class="hljs-string">'e'</span>, <span class="hljs-string">'d'</span>, <span class="hljs-string">' '</span>, <span class="hljs-string">'s'</span>, <span class="hljs-string">'m'</span>, <span class="hljs-string">'i'</span>, <span class="hljs-string">'t'</span>, <span class="hljs-string">'h'</span>};
+      <span class="hljs-built_in">string</span> name = <span class="hljs-string">""</span>;
+      <span class="hljs-built_in">int</span>[] a = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>[<span class="hljs-number">10</span>];
+      <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; letters.Length; i++)
+      {
+         name += letters[i];
+         a[i] = i + <span class="hljs-number">1</span>;
+         SendMessage(name, a[i]);
+      }
+      Console.ReadKey();
+   }
+
+   <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SendMessage</span>(<span class="hljs-params"><span class="hljs-built_in">string</span> name, <span class="hljs-built_in">int</span> msg</span>)</span>
+   {
+      Console.WriteLine(<span class="hljs-string">"Hello, "</span> + name + <span class="hljs-string">"! Count to "</span> + msg);
+   }
+}
+</span></code></pre>
+<div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#start-the-debugger" aria-label="Sección titulada: Inicio del depurador"></a><h2 id="start-the-debugger" class="heading-anchor">Inicio del depurador</h2></div>
+<div data-moniker="vs-2019">
+<ol>
+<li><p>Presione <strong>F5</strong> (<strong>Depurar &gt; Iniciar depuración</strong>) o el botón <strong>Iniciar depuración</strong><img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/dbg-tour-start-debugging.png" alt="Image of the Start Debugging button." title="Start Debugging" data-linktype="relative-path"> en la barra de herramientas de depuración.</p>
+<p>Al pulsar <strong>F5</strong>, la aplicación se inicia con el depurador activado para analizar los procesos. Como de momento no hemos hecho nada especial para examinar el código, Por lo tanto, la aplicación solo se carga y ve esta salida de la consola.</p>
+<div class="codeHeader" id="code-try-1" data-bi-name="code-header"><span class="language">Símbolo del sistema de Windows</span>
+		<button type="button" class="action position-relative display-none-print" data-bi-name="copy">
+			<span class="icon margin-right-xxs" aria-hidden="true">
+				<span class="docon docon-edit-copy"></span>
+			</span>
+			<span>Copiar</span>
+			<div class="successful-copy-alert position-absolute right-0 top-0 left-0 bottom-0 display-flex align-items-center justify-content-center has-text-success-invert has-background-success is-transparent" aria-hidden="true">
+				<span class="icon font-size-lg">
+					<span class="docon docon-check-mark"></span>
+				</span>
+			</div>
+		</button>
+	</div><pre class="has-inner-focus"><code class="lang-cmd" data-author-content="Hello, f! Count to 1
+Hello, fr! Count to 2
+Hello, fre! Count to 3
+Hello, fred! Count to 4
+Hello, fred ! Count to 5
+Hello, fred s! Count to 6
+Hello, fred sm! Count to 7
+Hello, fred smi! Count to 8
+Hello, fred smit! Count to 9
+Hello, fred smith! Count to 10
+"><span>Hello, f! Count to <span class="hljs-number">1</span>
+Hello, fr! Count to <span class="hljs-number">2</span>
+Hello, fre! Count to <span class="hljs-number">3</span>
+Hello, fred! Count to <span class="hljs-number">4</span>
+Hello, fred ! Count to <span class="hljs-number">5</span>
+Hello, fred s! Count to <span class="hljs-number">6</span>
+Hello, fred sm! Count to <span class="hljs-number">7</span>
+Hello, fred smi! Count to <span class="hljs-number">8</span>
+Hello, fred smit! Count to <span class="hljs-number">9</span>
+Hello, fred smith! Count to <span class="hljs-number">10</span>
+</span></code></pre>
+<p>En este tutorial, analizará con más profundidad el uso de esta aplicación junto con el depurador y verá las características del depurador.</p>
+</li>
+<li><p>Detenga el depurador; para ello, presione el botón de detención rojo (<strong>Shift</strong> + <strong>F5</strong>). <img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/dbg-tour-stop-debugging.png" alt="Image of the Stop Debugging button." title="Stop Debugging" data-linktype="relative-path"></p>
+</li>
+<li><p>En la ventana de consola, presione una tecla para cerrarla.</p>
+</li>
+</ol>
+</div>
+<div data-moniker="vs-2022">
+<p>Aquí se usan principalmente métodos abreviados de teclado, ya que es una manera rápida de ejecutar comandos del depurador. También se anotan los comandos equivalentes, como los comandos de menú o de barra de herramientas.</p>
+<ol>
+<li><p>Para iniciar el depurador, seleccione <strong>F5</strong> o elija el botón <strong>Destino de depuración</strong> en la barra de herramientas estándar. También puede elegir el botón <strong>Iniciar depuración</strong> en la barra de herramientas de depuración o <strong>Depurar</strong>&gt;<strong>Iniciar depuración</strong> en la barra de menú.</p>
+<p><span class="mx-imgBorder"><img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/dbg-tour-start-debugging(1).png" alt="Screenshot of the Debug Target button in the Standard toolbar of Visual Studio 2022." data-linktype="relative-path"></span>
+</p>
+<p><strong>F5</strong> inicia la aplicación con el depurador asociado al proceso de aplicación. Puesto que no hemos hecho nada especial para examinar el código, la aplicación se ejecuta hasta su finalización y puede ver la salida de la consola.</p>
+<div class="codeHeader" id="code-try-2" data-bi-name="code-header"><span class="language">Símbolo del sistema de Windows</span>
+		<button type="button" class="action position-relative display-none-print" data-bi-name="copy">
+			<span class="icon margin-right-xxs" aria-hidden="true">
+				<span class="docon docon-edit-copy"></span>
+			</span>
+			<span>Copiar</span>
+			<div class="successful-copy-alert position-absolute right-0 top-0 left-0 bottom-0 display-flex align-items-center justify-content-center has-text-success-invert has-background-success is-transparent" aria-hidden="true">
+				<span class="icon font-size-lg">
+					<span class="docon docon-check-mark"></span>
+				</span>
+			</div>
+		</button>
+	</div><pre class="has-inner-focus"><code class="lang-cmd" data-author-content="Hello, f! Count to 1
+Hello, fr! Count to 2
+Hello, fre! Count to 3
+Hello, fred! Count to 4
+Hello, fred ! Count to 5
+Hello, fred s! Count to 6
+Hello, fred sm! Count to 7
+Hello, fred smi! Count to 8
+Hello, fred smit! Count to 9
+Hello, fred smith! Count to 10
+"><span>Hello, f! Count to <span class="hljs-number">1</span>
+Hello, fr! Count to <span class="hljs-number">2</span>
+Hello, fre! Count to <span class="hljs-number">3</span>
+Hello, fred! Count to <span class="hljs-number">4</span>
+Hello, fred ! Count to <span class="hljs-number">5</span>
+Hello, fred s! Count to <span class="hljs-number">6</span>
+Hello, fred sm! Count to <span class="hljs-number">7</span>
+Hello, fred smi! Count to <span class="hljs-number">8</span>
+Hello, fred smit! Count to <span class="hljs-number">9</span>
+Hello, fred smith! Count to <span class="hljs-number">10</span>
+</span></code></pre>
+</li>
+<li><p>Para detener el depurador, presione <strong>Mayús+F5</strong> o elija el botón <strong>Detener depuración</strong> en la barra de herramientas de depuración. Otro modo es elegir <strong>Depurar</strong>&gt;<strong>Detener depuración</strong> en la barra de menú.</p>
+<p><span class="mx-imgBorder"><img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/dbg-tour-stop-debugging(1).png" alt="Screenshot of the Stop debugging button in the Debug toolbar of Visual Studio 2022." data-linktype="relative-path"></span>
+</p>
+</li>
+<li><p>En la ventana de la consola, presione una tecla para cerrarla.</p>
+</li>
+</ol>
+</div>
+<div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#set-a-breakpoint-and-start-the-debugger" aria-label="Sección titulada: Establecer un punto de interrupción e iniciar el depurador"></a><h2 id="set-a-breakpoint-and-start-the-debugger" class="heading-anchor">Establecer un punto de interrupción e iniciar el depurador</h2></div>
+<div data-moniker="vs-2019">
+<ol>
+<li><p>En el bucle <code>for</code> de la función <code>Main</code>, establezca un punto de interrupción haciendo clic en el margen izquierdo de la siguiente línea de código:</p>
+<p><code>name += letters[i];</code></p>
+<p>En el lugar en el que establezca el punto de interrupción aparecerá un círculo rojo <img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/dbg-breakpoint.png" alt="Image of a breakpoint." title="Breakpoint" data-linktype="relative-path">.</p>
+<p>Los puntos de interrupción son una de las características más básicas y esenciales de una depuración confiable. Un punto de interrupción indica dónde Visual Studio debe suspender la ejecución de código para poder echar un vistazo a los valores de las variables o al comportamiento de la memoria, o determinar si se está ejecutando o no una bifurcación de código.</p>
+</li>
+<li><p>Presione <strong>F5</strong> o el botón <strong>Iniciar depuración</strong>. <img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/dbg-tour-start-debugging.png" alt="Screenshot of the Start Debugging button." title="Start Debugging" data-linktype="relative-path"> La aplicación se inicia y el depurador se ejecuta hasta la línea de código en la que haya establecido el punto de interrupción.</p>
+<p><img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/get-started-set-breakpoint.gif" alt="Set and hit a breakpoint" data-linktype="relative-path"></p>
+<p>La flecha amarilla representa la instrucción en la que el depurador se ha detenido, lo cual también suspende la ejecución de la aplicación en el mismo punto (esta instrucción todavía no se ha ejecutado).</p>
+<p>Si la aplicación todavía no se está ejecutando, <strong>F5</strong> inicia el depurador y lo detiene en el primer punto de interrupción. En caso contrario, <strong>F5</strong> permite continuar ejecutando la aplicación hasta el siguiente punto de interrupción.</p>
+<p>Los puntos de interrupción son una característica de utilidad cuando se conoce la línea o la sección de código que se quiere examinar en detalle. Para obtener información sobre los diferentes tipos de puntos de interrupción que se pueden establecer, como los puntos de interrupción condicionales, vea <a href="https://learn.microsoft.com/es-es/visualstudio/debugger/using-breakpoints?view=vs-2019" data-linktype="relative-path">Uso de puntos de interrupción</a>.</p>
+</li>
+</ol>
+</div>
+<div data-moniker="vs-2022">
+<ol>
+<li><p>En el bucle <code>for</code> de la función <code>Main</code>, establezca un punto de interrupción haciendo clic en el margen izquierdo de la siguiente línea de código:</p>
+<p><code>name += letters[i];</code></p>
+<p>En el lugar en el que establezca el punto de interrupción aparecerá un círculo rojo.</p>
+<p><span class="mx-imgBorder"><img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/dbg-tour-breakpoint.png" alt="Screenshot of a breakpoint in Visual Studio 2022." data-linktype="relative-path"></span>
+</p>
+<p>Los puntos de interrupción son una de las características esenciales para una depuración confiable. Puede establecer puntos de interrupción donde quiera que Visual&nbsp;Studio pause la ejecución de código, de forma que pueda examinar los valores de las variables o el comportamiento de la memoria, o saber si una bifurcación de código se ejecuta o no.</p>
+</li>
+<li><p>Para iniciar la depuración, seleccione <strong>F5</strong> o elija el botón <strong>Destino de depuración</strong> en la barra de herramientas estándar. Otro modo es elegir el botón <strong>Iniciar depuración</strong> en la barra de herramientas de depuración o <strong>Depurar</strong>&gt;<strong>Iniciar depuración</strong> en la barra de menú. La aplicación se inicia y el depurador se ejecuta hasta la línea de código en la que haya establecido el punto de interrupción.</p>
+<p><span class="mx-imgBorder"><img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/get-started-set-breakpoint.png" alt="Screenshot showing a breakpoint in the code editor of Visual Studio 2022, with code execution paused at the breakpoint." data-linktype="relative-path"></span>
+</p>
+<p>La flecha amarilla apunta a la instrucción en la que se detuvo el depurador. La ejecución de la aplicación se pausa en el mismo punto, con la instrucción aún sin ejecutar.</p>
+<p>Cuando la aplicación no se está ejecutando, al presionar <strong>F5</strong> se inicia el depurador, que ejecuta la aplicación hasta llegar al primer punto de interrupción. Si la aplicación está en pausa en un punto de interrupción, al presionar <strong>F5</strong> se seguirá ejecutando la aplicación hasta que llegue al siguiente punto de interrupción.</p>
+<p>Los puntos de interrupción son una característica útil cuando se conoce la línea o la sección de código que se quiere examinar en detalle. Para más información sobre los diferentes tipos de puntos de interrupción que se pueden establecer, como los puntos de interrupción condicionales, consulte <a href="https://learn.microsoft.com/es-es/visualstudio/debugger/using-breakpoints?view=vs-2019" data-linktype="relative-path">Uso de puntos de interrupción</a>.</p>
+</li>
+</ol>
+</div>
+<div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#navigate-code-and-inspect-data-by-using-data-tips" aria-label="Sección titulada: Navegación por el código e inspección de los datos mediante sugerencias de datos"></a><h2 id="navigate-code-and-inspect-data-by-using-data-tips" class="heading-anchor">Navegación por el código e inspección de los datos mediante sugerencias de datos</h2></div>
+<div data-moniker="vs-2019">
+<p>Normalmente, aquí usamos métodos abreviados de teclado porque son una buena forma de ejecutar rápidamente la aplicación en el depurador, pero los comandos equivalentes, como los comandos de menú, se muestran entre paréntesis.</p>
+<ol>
+<li><p>Mientras la ejecución del código está en pausa en la instrucción <code>name += letters[i]</code>, mantenga el mouse sobre la variable <code>letters</code> y verá su valor predeterminado, el valor del primer elemento de la matriz <code>char[10]</code>.</p>
+<p>Las características que le permiten inspeccionar las variables son una de las más útiles del depurador y ofrecen diferentes formas de hacerlo. A menudo, para depurar un problema, debe intentar averiguar si las variables están almacenando los valores que espera que tengan en un momento determinado.</p>
+</li>
+<li><p>Expanda la variable <code>letters</code> para ver sus propiedades, que incluyen todos los elementos que contiene.</p>
+<p><img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/get-started-view-data-tip.png" alt="Screenshot of the debugger paused at the &#39;name+= letters[I]&#39; statement." data-linktype="relative-path"></p>
+</li>
+<li><p>Después, mantenga el mouse sobre la variable <code>name</code> y verá su valor actual, una cadena vacía.</p>
+</li>
+<li><p>Presione <strong>F10</strong> dos veces, o bien elija <strong>Depurar &gt; Depurar paso a paso por procedimientos</strong>, para avanzar hasta la llamada de método <code>SendMessage</code> y, después, vuelva a presionar <strong>F10</strong>.</p>
+<p>F10 hace avanzar el depurador hasta la siguiente instrucción sin depurar las funciones ni los métodos del código de la aplicación paso a paso por instrucciones (el código se sigue ejecutando). Al presionar F10 en la llamada de método <code>SendMessage</code>, se omite el código de implementación de <code>SendMessage</code> (algo que quizás no nos interese en este momento).</p>
+</li>
+<li><p>Presione <strong>F10</strong> varias veces, o bien elija <strong>Depurar</strong>&gt;<strong>Depurar paso a paso por procedimientos</strong>, para iterar varias veces por el bucle <code>for</code>, deténgase de nuevo en el punto de interrupción y mantenga el mouse sobre la variable <code>name</code> cada vez para comprobar su valor.</p>
+<p><img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/get-started-data-tip.gif" alt="An animated screenshot of the Visual Studio Debugger showing the effect of pressing F10 to " step="" over"="" and="" iterate="" through="" a="" loop="" during="" debugging."="" data-linktype="relative-path"></p>
+<p>El valor de la variable cambia con cada iteración del bucle <code>for</code> y muestra los valores de <code>f</code>, después, <code>fr</code>, luego, <code>fre</code>, etc. Para hacer que el depurador avance por el bucle más rápido en este escenario, puede presionar <strong>F5</strong>, o bien elegir <strong>Depurar</strong>&gt;<strong>Continuar</strong>, en su lugar, lo que le permite avanzar hasta el punto de interrupción en lugar de hasta la siguiente instrucción.</p>
+<p>A menudo, al realizar una depuración, queremos una forma rápida de comprobar los valores de las propiedades de las variables para ver si se almacenan los valores correspondientes, y las sugerencias de datos son una buena forma de verlo.</p>
+</li>
+<li><p>Mientras la ejecución del código permanece en pausa en el bucle <code>for</code> del método <code>Main</code>, presione <strong>F11</strong> (o seleccione <strong>Depurar &gt; Depurar paso a paso por instrucciones</strong>) hasta que se detenga la llamada de método <code>SendMessage</code>.</p>
+<p>Debe estar en esta línea de código:</p>
+<p><code>SendMessage(name, a[i]);</code></p>
+</li>
+<li><p>Presione <strong>F11</strong> una vez más para entrar en el método <code>SendMessage</code>.</p>
+<p>El puntero de color amarillo avanza hasta el método <code>SendMessage</code>.</p>
+<p><img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/get-started-f11.png" alt="Screenshot of the execution pointer at the SendMessage method." title="F10 Step Into" data-linktype="relative-path"></p>
+<p>F11 es el comando <strong>Depurar paso a paso por instrucciones</strong> y permite avanzar la ejecución de la aplicación de instrucción en instrucción. F11 es una buena forma de examinar el flujo de ejecución con más detalle. De forma predeterminada, el depurador omite el código que no es de usuario (si quiere más detalles, vea <a href="https://learn.microsoft.com/es-es/visualstudio/debugger/just-my-code?view=vs-2019" data-linktype="relative-path">Solo mi código</a>).</p>
+<p>Imagine que ha terminado de examinar el método <code>SendMessage</code> y quiere salir de él, pero permanecer en el depurador. Puede hacerlo con el comando <strong>Salir de la depuración</strong>.</p>
+</li>
+<li><p>Presione <strong>Mayús</strong> + <strong>F11</strong> (o <strong>Depurar &gt; Salir de la depuración</strong>).</p>
+<p>Este comando reanuda la ejecución de la aplicación (y hace avanzar el depurador) hasta que se devuelve el método o la función actual.</p>
+<p>Debería volver a estar en el bucle <code>for</code> del método <code>Main</code>, detenido en la llamada al método <code>SendMessage</code>. Para más información sobre las distintas formas de desplazarse por el código, vea <a href="https://learn.microsoft.com/es-es/visualstudio/debugger/navigating-through-code-with-the-debugger?view=vs-2019" data-linktype="relative-path">Navegación por el código en el depurador</a>.</p>
+</li>
+</ol>
+</div>
+<div data-moniker="vs-2022">
+<ol>
+<li><p>Mientras la ejecución del código está en pausa en la instrucción <code>name += letters[i]</code>, mantenga el puntero sobre la variable <code>letters</code> para ver una sugerencia de datos que muestre el tamaño de la matriz y el tipo de elemento, <code>char[10]</code>.</p>
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span> Nota</p>
+<p>Una de las características más útiles del depurador es su capacidad para inspeccionar una variable. A menudo, al depurar un problema, debe intentar averiguar si las variables tienen los valores que espera en un momento determinado. Una buena forma de hacerlo es ver las sugerencias de datos.</p>
+</div>
+</li>
+<li><p>Expanda la variable <code>letters</code> para ver todos sus elementos de matriz y sus valores.</p>
+<p><span class="mx-imgBorder"><img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/get-started-view-data-tip(1).png" alt="Screenshot of a debugger data tip in Visual Studio 2022 that shows the element values for the &#39;letters&#39; array variable." data-linktype="relative-path"></span>
+</p>
+</li>
+<li><p>Mantenga el puntero sobre la variable <code>name</code> y verá su valor actual, que es una cadena vacía.</p>
+</li>
+<li><p>Para avanzar el depurador a la siguiente instrucción, presione <strong>F10</strong> o elija el botón <strong>Depurar paso a paso por procedimientos</strong> en la barra de herramientas de depuración. Otro modo es elegir <strong>Depurar</strong>&gt;<strong>Depurar paso a paso por procedimientos</strong> en la barra de menú. Presione <strong>F10</strong> dos veces más para avanzar más allá de la llamada de método <code>SendMessage</code>.</p>
+<p>Al presionar <strong>F10</strong> avanza el depurador sin depurar paso a paso por instrucciones la función ni los métodos, si bien el código todavía se ejecuta. De este modo, se omite la depuración del código en el método <code>SendMessage</code>, que no nos interesa en este momento.</p>
+</li>
+<li><p>Para recorrer en iteración el bucle <code>for</code> varias veces, seleccione <strong>F10</strong> de forma repetida. Durante cada iteración del bucle, deténgase en el punto de interrupción y, luego, mantenga el puntero sobre la variable <code>name</code> para comprobar su valor en la sugerencia de datos.</p>
+<p><span class="mx-imgBorder"><img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/get-started-data-tip.png" alt="Screenshot of a debugger data tip in Visual Studio 2022 that shows the string value for the &#39;name&#39; variable." data-linktype="relative-path"></span>
+</p>
+<p>El valor de la variable cambia con cada iteración del bucle <code>for</code> y muestra los valores de <code>f</code>, después, <code>fr</code>, luego, <code>fre</code>, etc. Para hacer avanzar el depurador por el bucle más rápido, seleccione <strong>F5</strong> en su lugar, que permite avanzar al punto de interrupción en lugar de a la instrucción siguiente.</p>
+</li>
+<li><p>Mientras la ejecución del código está en pausa en el bucle <code>for</code> del método <code>Main</code>, seleccione <strong>F11</strong> o elija el botón <strong>Depurar paso a paso por instrucciones</strong> en la barra de herramientas de depuración. Otro modo es elegir <strong>Depurar</strong>&gt;<strong>Depurar paso a paso por instrucciones</strong> en la barra de menú, hasta que llegue a la llamada de método <code>SendMessage</code>.</p>
+<p>El depurador debe pausarse en esta línea de código:</p>
+<p><code>SendMessage(name, a[i]);</code></p>
+</li>
+<li><p>Para depurar paso a paso por instrucciones el método <code>SendMessage</code>, presione de nuevo <strong>F11</strong>.</p>
+<p>El puntero de color amarillo avanza hasta el método <code>SendMessage</code>.</p>
+<p><span class="mx-imgBorder"><img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/get-started-f11(1).png" alt="Screenshot showing the execution pointer of the debugger within the &#39;SendMessage&#39; method." data-linktype="relative-path"></span>
+</p>
+<p><strong>F11</strong> le ayuda a examinar el flujo de ejecución del código con más profundidad. Para depurar paso a paso por instrucciones un método desde una llamada de método, seleccione <strong>F11</strong>. De forma predeterminada, el depurador omite la depuración paso a paso por instrucciones de métodos que no son de usuario. Para información sobre cómo depurar código que no es de usuario, consulte <a href="https://learn.microsoft.com/es-es/visualstudio/debugger/just-my-code?view=vs-2019" data-linktype="relative-path">Solo mi código</a>.</p>
+<p>Cuando haya terminado de depurar el método <code>SendMessage</code>, estará listo para volver al bucle <code>for</code> del método <code>main</code>.</p>
+</li>
+<li><p>Para salir del método <code>SendMessage</code>, presione <strong>Mayús+F11</strong> o elija el botón <strong>Salir de la depuración</strong> de la barra de herramientas de depuración. Otro modo es elegir <strong>Depurar</strong>&gt;<strong>Salir de la depuración</strong> en la barra de menú.</p>
+<p>La opción <strong>Salir de la depuración</strong> reanuda la ejecución de la aplicación y hace avanzar el depurador hasta que se devuelve el método o la función actuales.</p>
+<p>Ve el puntero amarillo de nuevo en el bucle <code>for</code> del método <code>Main</code>, detenido en la llamada de método <code>SendMessage</code>. Para más información sobre las distintas formas de desplazarse por el código, vea <a href="https://learn.microsoft.com/es-es/visualstudio/debugger/navigating-through-code-with-the-debugger?view=vs-2019" data-linktype="relative-path">Navegación por el código en el depurador</a>.</p>
+</li>
+</ol>
+</div>
+<div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#navigate-code-using-run-to-click" aria-label="Sección titulada: Navegación por el código con Ejecutar hasta clic"></a><h2 id="navigate-code-using-run-to-click" class="heading-anchor">Navegación por el código con Ejecutar hasta clic</h2></div>
+<div data-moniker="vs-2019">
+<ol>
+<li><p>Presione <strong>F5</strong> para avanzar de nuevo hasta el punto de interrupción.</p>
+</li>
+<li><p>En el editor de código, desplácese hacia abajo y mantenga el puntero sobre el método <code>Console.WriteLine</code> del método <code>SendMessage</code> hasta que el botón verde <strong>Ejecutar hasta hacer clic</strong><img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/dbg-tour-run-to-click.png" alt="Image of the Run to Click button." title="RunToClick" data-linktype="relative-path"> aparezca. La información sobre herramientas del botón muestra "Ejecutar hasta aquí".</p>
+<p><img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/get-started-run-to-click.png" alt="Screenshot of the Run to Click button." title="Run to Click" data-linktype="relative-path"></p>
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span> Nota</p>
+<p>El botón <strong>Run to Click</strong> (Ejecutar hasta hacer clic) es una novedad de Visual&nbsp;Studio&nbsp;2017. (Si no ve el botón con la flecha de color verde, presione <strong>F11</strong> en este ejemplo para hacer avanzar el depurador hasta el lugar correcto).</p>
+</div>
+</li>
+<li><p>Seleccione el botón <strong>Ejecutar hasta clic</strong>. <img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/dbg-tour-run-to-click.png" alt="Image of the Run to Click button." title="RunToClick" data-linktype="relative-path"></p>
+<p>El depurador avanza hasta el método <code>Console.WriteLine</code>.</p>
+<p>Usar este botón es similar a establecer un punto de interrupción temporal. La característica <strong>Ejecutar hasta clic</strong> es útil para desplazarse rápidamente por un área visible del código de la aplicación (puede seleccionar en cualquier archivo abierto).</p>
+</li>
+</ol>
+</div>
+<div data-moniker="vs-2022">
+<ol>
+<li><p>Presione <strong>F5</strong> para avanzar de nuevo hasta el punto de interrupción.</p>
+</li>
+<li><p>En el editor de código, mantenga el puntero sobre la llamada de método <code>Console.WriteLine</code> del método <code>SendMessage</code> hasta que aparezca el botón verde <strong>Ejecutar hasta hacer clic</strong>. La información sobre herramientas del botón muestra "Ejecutar hasta aquí".</p>
+<p><span class="mx-imgBorder"><img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/get-started-run-to-click(1).png" alt="Screenshot showing the Run to Click button in Visual Studio 2022." data-linktype="relative-path"></span>
+</p>
+</li>
+<li><p>Elija el botón <strong>Ejecutar hasta hacer clic</strong>. Como alternativa, con el cursor en la instrucción <code>Console.WriteLine</code>, presione <strong>Ctrl+F10</strong>. O bien, haga clic con el botón derecho en la llamada de método <code>Console.WriteLine</code> y elija <strong>Ejecutar hasta el cursor</strong> en el menú contextual.</p>
+<p>El depurador avanza hasta la llamada de método <code>Console.WriteLine</code>.</p>
+<p>El uso del botón <strong>Ejecutar hasta hacer clic</strong> es parecido a establecer un punto de interrupción temporal y resulta útil para moverse rápidamente dentro de una región visible del código de la aplicación en un archivo abierto.</p>
+</li>
+</ol>
+</div>
+<div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#restart-your-app-quickly" aria-label="Sección titulada: Reiniciar la aplicación rápidamente"></a><h2 id="restart-your-app-quickly" class="heading-anchor">Reiniciar la aplicación rápidamente</h2></div>
+<div data-moniker="vs-2019">
+<p>Seleccione el botón <strong>Reiniciar</strong><img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/dbg-tour-restart.png" alt="Image of the Restart App button." title="RestartApp" data-linktype="relative-path"> en la barra de herramientas de depuración (<strong>Ctrl</strong> + <strong>Mayús</strong> + <strong>F5</strong>).</p>
+<p>El botón <strong>Reiniciar</strong> permite ahorrar tiempo, ya que hace que no sea necesario detener la aplicación y reiniciar el depurador. El depurador se detiene en el primer punto de interrupción que se alcanza al ejecutar el código.</p>
+<p>El depurador se detiene de nuevo en el punto de interrupción que ha establecido antes dentro del bucle <code>for</code>.</p>
+</div>
+<div data-moniker="vs-2022">
+<p>Para volver a ejecutar la aplicación desde el principio en el depurador presione <strong>Ctrl+Mayús+F5</strong> o elija el botón <strong>Reiniciar</strong> en la barra de herramientas de depuración. Otro modo es elegir <strong>Depurar</strong>&gt;<strong>Reiniciar</strong> en la barra de menú.</p>
+<p><span class="mx-imgBorder"><img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/dbg-tour-restart-debugging.png" alt="Screenshot of the Restart button in the Debug toolbar of Visual Studio 2022." data-linktype="relative-path"></span>
+</p>
+<p><strong>Reiniciar</strong> detiene el depurador y, luego, lo reinicia, en un paso. Cuando se reinicie el depurador, se ejecuta hasta el primer punto de interrupción, que es el punto de interrupción que estableció anteriormente dentro del bucle <code>for</code> y, luego, se pausa.</p>
+</div>
+<div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#inspect-variables-with-the-autos-and-locals-windows" aria-label="Sección titulada: Inspeccionar variables con las ventanas Automático y Variables locales"></a><h2 id="inspect-variables-with-the-autos-and-locals-windows" class="heading-anchor">Inspeccionar variables con las ventanas Automático y Variables locales</h2></div>
+<div data-moniker="vs-2019">
+<ol>
+<li><p>Vea la ventana <strong>Automático</strong>, en la parte inferior del editor de código.</p>
+<p>Si está cerrada, ábrala mientras está en pausa en el depurador seleccionando <strong>Depurar</strong>&gt;<strong>Ventanas</strong>&gt;<strong>Automático</strong>.</p>
+<p>En la ventana <strong>Automático</strong> puede ver las variables y su valor actual. En la ventana <strong>Automático</strong> se muestran todas las variables que se usan en la línea actual o en la anterior. Para consultar el comportamiento específico de los lenguajes, vea la documentación.</p>
+</li>
+<li><p>A continuación, examine la ventana <strong>Variables locales</strong> en una pestaña situada junto a la ventana <strong>Automático</strong>.</p>
+</li>
+<li><p>Expanda la variable <code>letters</code> para mostrar los elementos que contiene.</p>
+<p><img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/get-started-locals-window.png" alt="Screenshot of the Locals Window in Visual Studio." title="Locals Window" data-linktype="relative-path"></p>
+<p>En la ventana <strong>Variables locales</strong> se muestran las variables que se encuentran en el <a href="https://www.wikipedia.org/wiki/Scope_(computer_science)" data-linktype="external">ámbito</a> actual, es decir, en el contexto de ejecución actual.</p>
+</li>
+</ol>
+</div>
+<div data-moniker="vs-2022">
+<p>Las ventanas <strong>Automático</strong> y <strong>Variables locales</strong> muestran valores de variables durante la depuración. Las ventanas solo están disponibles durante una sesión de depuración. La ventana <strong>Automático</strong> muestra las variables usadas en la línea actual en la que se encuentra el depurador y en la línea anterior. La ventana <strong>Variables locales</strong> muestra las variables definidas en el ámbito local, que suele ser la función o el método actuales.</p>
+<ol>
+<li><p>Mientras el depurador está en pausa, examine la ventana <strong>Automático</strong> de la parte inferior del editor de código.</p>
+<p>Si la ventana <strong>Automático</strong> está cerrada, presione <strong>Ctrl+D, A</strong>, o elija <strong>Depurar</strong>&gt;<strong>Ventanas</strong>&gt;<strong>Automático</strong> en la barra de menú.</p>
+</li>
+<li><p>Con el depurador aún en pausa, examine la ventana <strong>Variables locales</strong>, en una pestaña situada junto a la ventana <strong>Automático</strong>.</p>
+<p>Si la ventana <strong>Variables locales</strong> está cerrada, presione <strong>Ctrl+D, L</strong>, o elija <strong>Depurar</strong>&gt;<strong>Ventanas</strong>&gt;<strong>Variables locales</strong>.</p>
+</li>
+<li><p>En la ventana <strong>Variables locales</strong>, expanda la variable <code>letters</code> para ver sus elementos de la matriz y sus valores.</p>
+<p><span class="mx-imgBorder"><img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/get-started-locals-window(1).png" alt="Screenshot of the Locals window in Visual Studio 2022, with the &#39;letters&#39; array variable expanded." data-linktype="relative-path"></span>
+</p>
+</li>
+</ol>
+<p>Para más información sobre las ventanas <strong>Automático</strong> y <strong>Variables locales</strong>, consulte <a href="https://learn.microsoft.com/es-es/visualstudio/debugger/autos-and-locals-windows?view=vs-2022&amp;preserve-view=true" data-linktype="absolute-path" class="preserve-view">Inspección de las variables en las ventanas Variables locales y Automático</a>.</p>
+</div>
+<div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#set-a-watch" aria-label="Sección titulada: Establecer una inspección"></a><h2 id="set-a-watch" class="heading-anchor">Establecer una inspección</h2></div>
+<div data-moniker="vs-2019">
+<p>En la ventana del editor de código principal, haga clic con el botón derecho en la variable <code>name</code> y elija <strong>Agregar inspección</strong>.</p>
+<p>En la parte inferior del editor de código se abre la ventana <strong>Inspección</strong>. Puede usar una ventana <strong>Inspección</strong> para especificar una variable (o una expresión) que quiera supervisar.</p>
+<p>Ahora, ha establecido una inspección en la variable <code>name</code> y puede ver cómo cambia su valor según avanza en el depurador. A diferencia de las otras ventanas de variables, en la ventana <strong>Inspección</strong> siempre se muestran las variables que está viendo (y se atenúan cuando están fuera del ámbito).</p>
+</div>
+<div data-moniker="vs-2022">
+<p>Puede especificar una variable, o una expresión, que quiera vigilar a medida que avanza por el código agregándola a la ventana <strong>Inspección</strong>.</p>
+<ol>
+<li><p>Mientras el depurador está en pausa, haga clic con el botón derecho en la variable <code>name</code> y elija <strong>Agregar inspección</strong>.</p>
+<p>La ventana <strong>Inspección</strong> se abre de forma predeterminada en la parte inferior del editor de código.</p>
+</li>
+<li><p>Ahora que ha establecido una inspección sobre la variable <code>name</code>, avance por el código para ver que el valor de la variable <code>name</code> cambia con cada iteración del bucle <code>for</code>.</p>
+<p>A diferencia de las otras ventanas de variables, en la ventana <strong>Inspección</strong> siempre se muestran las variables que está viendo. Las variables que están fuera del ámbito se muestran como no disponibles.</p>
+</li>
+</ol>
+<p>Para obtener más información sobre la ventana <strong>Inspección</strong>, consulte <a href="https://learn.microsoft.com/es-es/visualstudio/debugger/watch-and-quickwatch-windows?view=vs-2022&amp;preserve-view=true" data-linktype="absolute-path" class="preserve-view">Inspección de variables con las ventanas de inspección</a>.</p>
+</div>
+<div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#examine-the-call-stack" aria-label="Sección titulada: Examinar la pila de llamadas"></a><h2 id="examine-the-call-stack" class="heading-anchor">Examinar la pila de llamadas</h2></div>
+<div data-moniker="vs-2019">
+<ol>
+<li><p>Mientras la ejecución del código está en pausa en el bucle <code>for</code>, seleccione la ventana <strong>Pila de llamadas</strong>, que se abrirá de forma predeterminada en el panel inferior derecho.</p>
+<p>Si está cerrada, ábrala mientras está en pausa en el depurador seleccionando <strong>Depurar</strong>&gt;<strong>Ventanas</strong>&gt;<strong>Pila de llamadas</strong>.</p>
+</li>
+<li><p>Presione <strong>F11</strong> varias veces hasta que vea que el depurador se detiene en el método <code>SendMessage</code>. Eche un vistazo a la ventana <strong>Pila de llamadas</strong>.</p>
+<p><img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/get-started-call-stack.png" alt="Screenshot of the Call Stack window in Visual Studio." title="ExamineCallStack" data-linktype="relative-path"></p>
+<p>En la ventana <strong>Pila de llamadas</strong> se muestra el orden en el que se llama a los métodos y las funciones. En la línea superior se muestra la función actual (el método <code>SendMessage</code> en esta aplicación). En la segunda línea se mostrará que se ha llamado a <code>SendMessage</code> desde el método <code>Main</code>, y así sucesivamente.</p>
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span> Nota</p>
+<p>La ventana <strong>Pila de llamadas</strong> es similar a la perspectiva de depuración de algunos IDE, como Eclipse.</p>
+</div>
+<p>La pila de llamadas es una buena forma de examinar y entender el flujo de ejecución de una aplicación.</p>
+<p>Puede hacer doble clic en una línea de código para ver ese código fuente. De este modo, que también cambia el ámbito actual bajo inspección por parte del depurador. Esta acción no hace avanzar el depurador.</p>
+<p>También puede usar los menús contextuales de la ventana <strong>Pila de llamadas</strong> para hacer otras cosas. Por ejemplo, puede insertar puntos de interrupción en funciones especificadas, avanzar el depurador mediante <strong>Ejecutar hasta el cursor</strong> y examinar el código fuente. Para obtener más información, vea <a href="https://learn.microsoft.com/es-es/visualstudio/debugger/how-to-use-the-call-stack-window?view=vs-2019" data-linktype="relative-path">Cómo: Examinar la pila de llamadas</a>.</p>
+</li>
+</ol>
+</div>
+<div data-moniker="vs-2022">
+<p>La opción <strong>Pila de llamadas</strong> puede ayudarle a comprender el flujo de ejecución de la aplicación, ya que muestra el orden en el que se llama a los métodos y las funciones.</p>
+<ol>
+<li><p>Mientras el depurador está en pausa en el bucle <code>for</code>, examine la ventana <strong>Pila de llamadas</strong>, que se abre de forma predeterminada en el panel inferior derecho del editor de código.</p>
+<p>Si la ventana <strong>Pila de llamadas</strong> está cerrada, presione <strong>Ctrl+D, C</strong>, o elija <strong>Depurar</strong>&gt;<strong>Ventanas</strong>&gt;<strong>Pila de llamadas</strong> en la barra de menú.</p>
+<p>En la ventana <strong>Pila de llamadas</strong>, ve el puntero amarillo en el método <code>Main</code> actual.</p>
+</li>
+<li><p>Presione <strong>F11</strong> varias veces hasta que vea que el depurador se detiene en el método <code>SendMessage</code>.</p>
+<p>La línea superior de la ventana <strong>Pila de llamadas</strong> muestra la función actual, que es el método <code>SendMessage</code>. En la segunda línea se muestra que se ha llamado al método <code>SendMessage</code> desde el método <code>Main</code>.</p>
+<p><span class="mx-imgBorder"><img src="./Tutorial_ Depurar código de C# - Visual Studio (Windows) _ Microsoft Learn_files/get-started-call-stack(1).png" alt="Screenshot of the Call Stack window in Visual Studio 2022." data-linktype="relative-path"></span>
+</p>
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span> Nota</p>
+<p>La ventana <strong>Pila de llamadas</strong> es similar a la perspectiva de depuración de algunos IDE, como Eclipse.</p>
+</div>
+<p>En la ventana <strong>Pila de llamadas</strong>, puede hacer doble clic en una línea de código para ir a ese código fuente, que cambia el ámbito actual bajo inspección por el depurador. Esta acción no hace avanzar el depurador.</p>
+<p>También puede usar los menús contextuales de la ventana <strong>Pila de llamadas</strong> para hacer otras cosas. Por ejemplo, puede insertar puntos de interrupción en funciones especificadas, hacer avanzar el depurador mediante la función <strong>Ejecutar hasta el cursor</strong> o ir al código fuente.</p>
+</li>
+</ol>
+<p>Para más información sobre la ventana <strong>Pila de llamadas</strong>, consulte <a href="https://learn.microsoft.com/es-es/visualstudio/debugger/how-to-use-the-call-stack-window?view=vs-2019" data-linktype="relative-path">Examen de la pila de llamadas</a>.</p>
+</div>
+<div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#change-the-execution-flow" aria-label="Sección titulada: Cambio del flujo de ejecución"></a><h2 id="change-the-execution-flow" class="heading-anchor">Cambio del flujo de ejecución</h2></div>
+<div data-moniker="vs-2019">
+<ol>
+<li><p>Presione <strong>F11</strong> dos veces para ejecutar el método <code>Console.WriteLine</code>.</p>
+</li>
+<li><p>Con el depurador en pausa en la llamada de método <code>SendMessage</code>, use el mouse para capturar la flecha amarilla o el puntero de ejecución (a la izquierda) y arrastre el puntero una línea hacia arriba hasta la instrucción <code>Console.WriteLine</code>.</p>
+</li>
+<li><p>Presione <strong>F11</strong>.</p>
+<p>El depurador volverá a ejecutar el método <code>Console.WriteLine</code> (verá esta acción en la salida de la ventana de la consola).</p>
+<p>Al cambiar el flujo de ejecución, puede, por ejemplo, comprobar las diferentes rutas de ejecución de código o volver a ejecutar código sin tener que reiniciar el depurador.</p>
+<div class="alert is-warning">
+<p class="alert-title"><span class="docon docon-status-warning-outline" aria-hidden="true"></span> Advertencia</p>
+<p>A menudo es necesario tener cuidado con esta característica, ya que puede ser que vea una advertencia en la información en pantalla. También puede ser que reciba otras advertencias. El hecho de mover el puntero no permite revertir la aplicación a un estado anterior.</p>
+</div>
+</li>
+<li><p>Presione <strong>F5</strong> para seguir ejecutando la aplicación.</p>
+<p>Enhorabuena por completar este tutorial.</p>
+</li>
+</ol>
+</div>
+<div data-moniker="vs-2022">
+<p>Puede mover el puntero de ejecución para cambiar el flujo de la aplicación durante la depuración.</p>
+<ol>
+<li><p>Con el depurador en pausa en la llamada de método <code>SendMessage</code> del bucle <code>for</code>, seleccione <strong>F11</strong> tres veces para depurar paso a paso por instrucciones el método <code>SendMessage</code> y avanzar más allá del método <code>Console.WriteLine</code> después de ejecutarlo.</p>
+<p>El depurador ahora se pausa en la llave de cierre final del método <code>SendMessage</code>.</p>
+</li>
+<li><p>Use el mouse para capturar la flecha amarilla o el puntero de ejecución (en el margen izquierdo) y, luego, arrastre el puntero una línea hacia arriba.</p>
+<p>El depurador vuelve ahora a la instrucción <code>Console.WriteLine</code>.</p>
+</li>
+<li><p>Presione <strong>F11</strong>.</p>
+<p>El depurador vuelve a ejecutar el método <code>Console.WriteLine</code> y ve una línea duplicada en la salida de la ventana de la consola.</p>
+</li>
+<li><p>Presione <strong>F5</strong> para seguir ejecutando la aplicación.</p>
+</li>
+</ol>
+<p>Al cambiar el flujo de ejecución, puede, por ejemplo, comprobar las diferentes rutas de ejecución de código o volver a ejecutar código sin tener que reiniciar el depurador.</p>
+<div class="alert is-warning">
+<p class="alert-title"><span class="docon docon-status-warning-outline" aria-hidden="true"></span> Advertencia</p>
+<p>Use esta característica con cuidado. Verá una advertencia en la información sobre herramientas del puntero de ejecución sobre la posibilidad de consecuencias no deseadas. También puede que reciba otras advertencias. Mover el puntero no permite revertir la aplicación a un estado anterior.</p>
+</div>
+<p>Para más información sobre cómo cambiar el flujo de ejecución, consulte <a href="https://learn.microsoft.com/es-es/visualstudio/debugger/navigating-through-code-with-the-debugger?view=vs-2022#BKMK_Set_the_next_statement_to_execute&amp;preserve-view=true" data-linktype="absolute-path" class="preserve-view">Mover el puntero para cambiar el flujo de ejecución</a>.</p>
+<p>Enhorabuena por completar este tutorial.</p>
+</div>
+<div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2019#next-steps" aria-label="Sección titulada: Pasos siguientes"></a><h2 id="next-steps" class="heading-anchor">Pasos siguientes</h2></div>
+<p>En este tutorial, ha aprendido a iniciar el depurador, a ejecutar el código paso a paso y a inspeccionar variables. Puede ser que le interese analizar las características del depurador con más detenimiento, así como consultar los vínculos disponibles con más información.</p>
+<div class="nextstepaction">
+<p><a href="https://learn.microsoft.com/es-es/visualstudio/debugger/debugger-feature-tour?view=vs-2019" data-linktype="relative-path" class="button button-primary button-filled has-text-wrap">Primer vistazo al depurador</a></p>
+</div>
+
+							</div>
+
+							<div id="assertive-live-region" role="alert" aria-live="assertive" class="visually-hidden" aria-relevant="additions" aria-atomic="true"></div>
+							<div id="polite-live-region" role="status" aria-live="polite" class="visually-hidden" aria-relevant="additions" aria-atomic="true"></div>
+							<!-- </content> -->
+
+						</main>
+
+
+
+
+						<!-- recommendations section -->
+						<!-- end recommendations section -->
+
+						<!-- feedback section -->
+						<!-- end feedback section -->
+
+						<!-- feedback report section -->
+						<!-- end feedback report section -->
+
+							<div id="ms--additional-resources-mobile" role="complementary" aria-label="Recursos adicionales" class="display-none-desktop display-none-print">
+								<hr class="hr">
+								<h2 id="ms--additional-resources-mobile-heading" class="title is-3">Recursos adicionales</h2>
+								<section id="right-rail-recommendations-mobile" data-bi-name="recommendations"><!---->
+		<hr class="hr display-none display-block-desktop">
+		<article class="margin-top-md margin-top-sm-desktop">
+			
+		<p class="font-weight-semibold font-size-md display-flex align-items-center">
+			<span class="icon margin-right-xxs" aria-hidden="true">
+				<span class="docon docon-book-art64"></span>
+			</span>
+			Documentación
+		</p>
+	
+			<div class="margin-top-xs ">
+				
+		<ul aria-live="polite" aria-relevant="additions" id="right-rail-recommendations-list-0">
+			<!---->
+					<li class="padding-none margin-top-xs margin-bottom-none position-relative ">
+						  
+				<p class="line-clamp-3">
+					<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-console?source=recommendations" data-bi-name="right-rail-recommendation-item-0">
+						Tutorial: Crear una aplicación de consola de C# sencilla  - Visual Studio (Windows)
+					</a>
+				</p>
+		   
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Cree una aplicación de consola de C# en Visual Studio y explore algunas características del entorno de desarrollo integrado (IDE) de Visual Studio.
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative ">
+						  
+				<p class="line-clamp-3">
+					<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/es-es/dotnet/core/tutorials/debugging-with-visual-studio?source=recommendations" data-bi-name="right-rail-recommendation-item-1">
+						Depuración de una aplicación de consola de .NET con Visual&nbsp;Studio - .NET
+					</a>
+				</p>
+		   
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Aprenda a depurar una aplicación de consola de .NET con Visual&nbsp;Studio.
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative ">
+						  
+				<p class="line-clamp-3">
+					<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/run-program?source=recommendations" data-bi-name="right-rail-recommendation-item-2">
+						Procedimientos para ejecutar un programa (C#) - Visual Studio (Windows)
+					</a>
+				</p>
+		   
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Comience a programar con C# en Visual&nbsp;Studio y ejecute programas desde un proyecto o archivo de código, trabaje con ensamblados, referencias, paquetes NuGet y .NET.
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative expandable">
+						  
+				<p class="line-clamp-3">
+					<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/es-es/visualstudio/ide/visual-csharp-intellisense?source=recommendations" data-bi-name="right-rail-recommendation-item-3">
+						IntelliSense para C# - Visual Studio (Windows)
+					</a>
+				</p>
+		   
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Explore las características de IntelliSense que puede usar al codificar el proyecto de C# para obtener acceso rápido a variables, comandos, funciones, palabras clave de lenguaje, etc.
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative expandable">
+						  
+				<p class="line-clamp-3">
+					<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/es-es/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio?source=recommendations" data-bi-name="right-rail-recommendation-item-4">
+						Accesos directos del teclado - Visual Studio (Windows)
+					</a>
+				</p>
+		   
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Conozca los métodos abreviados de teclado predeterminados de Visual&nbsp;Studio que le permiten acceder a diversos comandos y ventanas.
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative expandable">
+						  
+				<p class="line-clamp-3">
+					<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/es-es/dotnet/csharp/language-reference/compiler-messages/cs1519?source=recommendations" data-bi-name="right-rail-recommendation-item-5">
+						Error del compilador CS1519 - C#
+					</a>
+				</p>
+		   
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Error del compilador CS1519
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative expandable">
+						  
+				<p class="line-clamp-3">
+					<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/es-es/visualstudio/debugger/debugger-feature-tour?source=recommendations" data-bi-name="right-rail-recommendation-item-6">
+						Primer vistazo al depurador - Visual Studio (Windows)
+					</a>
+				</p>
+		   
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Empiece a depurar las aplicaciones mediante el depurador de Visual Studio y vea lo que hace el código mientras se ejecuta.
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative expandable">
+						  
+				<p class="line-clamp-3">
+					<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/es-es/dotnet/csharp/language-reference/compiler-messages/cs0122?source=recommendations" data-bi-name="right-rail-recommendation-item-7">
+						Error del compilador CS0122 - C#
+					</a>
+				</p>
+		   
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Error del compilador CS0122
+		</p>
+	
+					</li>
+				<!---->
+		</ul>
+	
+			</div>
+			<!---->
+				
+		<button type="button" aria-expanded="false" data-show-more="" class="link-button font-weight-semibold font-size-sm margin-top-sm" aria-controls="right-rail-recommendations-list-0" data-title="Mostrar 5 más" data-bi-name="show-more-btn">
+			<span class="show-more-text "><!---->Mostrar 5&nbsp;más<!----></span>
+			
+		</button>
+	
+		  <!---->
+		</article>
+	<!----></section>
+								<section id="right-rail-training-mobile" data-bi-name="learning-resources-card"><!---->
+		<hr class="hr display-none display-block-desktop">
+		<article class="margin-top-md margin-top-sm-desktop">
+			
+		<p class="font-weight-semibold font-size-md display-flex align-items-center">
+			<span class="icon margin-right-xxs" aria-hidden="true">
+				<span class="docon docon-cube-cone-ball-shapes"></span>
+			</span>
+			Cursos
+		</p>
+	
+			<div class="margin-top-xs position-relative">
+				<!---->
+		<div class="position-relative margin-top-xs">
+			 
+				<p class="has-line-height-reset color-text-subtle font-size-xs font-weight-semibold">
+					Módulo
+				</p>
+		   
+				<p class="line-clamp-3">
+					<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/es-es/training/modules/implement-visual-studio-code-debugging-tools/?source=recommendations">
+						Implementación de las herramientas de depuración de Visual Studio Code para C# - Training
+					</a>
+				</p>
+		   
+			
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			En este módulo se exploran las herramientas y los procesos usados para depurar aplicaciones de consola de C# en Visual Studio Code.  Las actividades prácticas proporcionan experiencia con puntos de interrupción, puntos de interrupción condicionales y recursos de depuración en la vista RUN AND DEBUG.
+		</p>
+	
+		</div>
+	<!----><!---->
+			</div>
+			
+		</article>
+	<!----></section>
+								<section id="right-rail-events-mobile" data-bi-name="events-card" hidden=""></section>
+								<section id="right-rail-qna-mobile" data-bi-name="qna-link-card" hidden=""></section>
+							</div>
+
+						<div class="border-top is-visible-interactive has-default-focus margin-top-sm ">
+
+
+
+	<footer id="footer-interactive" data-bi-name="footer" class="footer-layout">
+	<div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop">
+			<a data-mscc-ic="false" class="locale-selector-link button button-sm button-clear flex-shrink-0" href="https://learn.microsoft.com/es-es/locale?target=https%3A%2F%2Flearn.microsoft.com%2Fes-es%2Fvisualstudio%2Fget-started%2Fcsharp%2Ftutorial-debugger%3Fview%3Dvs-2019" data-bi-name="select-locale" aria-label="Selector de idioma del contenido. Actualmente está establecido en Español (España).">
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-world"></span>
+					</span>
+					<span class="local-selector-link-text">Español (España)</span></a>
+		<div class="flex-shrink-0">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger" aria-controls="theme-menu-interactive" aria-expanded="false" title="Tema" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Tema</span>
+		<span class="icon expanded-indicator" aria-hidden="true">
+			<span class="docon docon-chevron-down-light"></span>
+		</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu-interactive" role="menu">
+		<ul class="theme-selector padding-xxs" role="none">
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start" data-theme-to="light" aria-pressed="false">
+					<span class="theme-light margin-right-xxs">
+						<span class="theme-selector-icon css-variable-support border display-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span>
+Claro					</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start is-selected" data-theme-to="dark" aria-pressed="true">
+					<span class="theme-dark margin-right-xxs">
+						<span class="border theme-selector-icon css-variable-support display-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span>
+Oscuro					</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start" data-theme-to="high-contrast" aria-pressed="false">
+					<span class="theme-high-contrast margin-right-xxs">
+						<span class="border theme-selector-icon css-variable-support display-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span>
+Contraste alto					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>
+		</div>
+	</div>
+	<ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder"><button data-bi-name="manageCookies">Administrar cookies</button></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="https://learn.microsoft.com/es-es/previous-versions/" data-bi-name="archivelink">Versiones anteriores</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog" data-bi-name="bloglink">Blog</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="https://learn.microsoft.com/es-es/contribute/" data-bi-name="contributorGuide">Contribuir</a></li>
+					<li><a class="external-link-indicator" data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacidad</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="https://learn.microsoft.com/es-es/legal/termsofuse" data-bi-name="termsofuse">Términos de uso</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/" data-bi-name="trademarks">Marcas comerciales</a></li>
+		<li>© Microsoft 2023</li>
+	</ul>
+</footer>
+						</div>
+
+					</div>
+
+						<div id="ms--additional-resources" class="right-container column is-4-desktop display-none display-block-desktop" data-bi-name="pageactions" role="complementary" aria-label="Recursos adicionales">
+							<div id="affixed-right-container" class="margin-top-sm-tablet position-sticky" data-bi-name="right-column" style="top: 36px; bottom: 36px;">
+								<h2 id="ms--additional-resources-heading" class="title is-6 margin-top-md">Recursos adicionales</h2>
+								<section id="right-rail-events" data-bi-name="events-card" hidden=""></section>
+								<section id="right-rail-training" data-bi-name="learning-resources-card"><!---->
+		<hr class="hr display-none display-block-desktop">
+		<article class="margin-top-md margin-top-sm-desktop">
+			
+		<p class="font-weight-semibold font-size-md display-flex align-items-center">
+			<span class="icon margin-right-xxs" aria-hidden="true">
+				<span class="docon docon-cube-cone-ball-shapes"></span>
+			</span>
+			Cursos
+		</p>
+	
+			<div class="margin-top-xs position-relative">
+				<!---->
+		<div class="position-relative margin-top-xs">
+			 
+				<p class="has-line-height-reset color-text-subtle font-size-xs font-weight-semibold">
+					Módulo
+				</p>
+		   
+				<p class="line-clamp-3">
+					<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/es-es/training/modules/implement-visual-studio-code-debugging-tools/?source=recommendations">
+						Implementación de las herramientas de depuración de Visual Studio Code para C# - Training
+					</a>
+				</p>
+		   
+			
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			En este módulo se exploran las herramientas y los procesos usados para depurar aplicaciones de consola de C# en Visual Studio Code.  Las actividades prácticas proporcionan experiencia con puntos de interrupción, puntos de interrupción condicionales y recursos de depuración en la vista RUN AND DEBUG.
+		</p>
+	
+		</div>
+	<!----><!---->
+			</div>
+			
+		</article>
+	<!----></section>
+								<section id="right-rail-recommendations" data-bi-name="recommendations"><!---->
+		<hr class="hr display-none display-block-desktop">
+		<article class="margin-top-md margin-top-sm-desktop">
+			
+		<p class="font-weight-semibold font-size-md display-flex align-items-center">
+			<span class="icon margin-right-xxs" aria-hidden="true">
+				<span class="docon docon-book-art64"></span>
+			</span>
+			Documentación
+		</p>
+	
+			<div class="margin-top-xs ">
+				
+		<ul aria-live="polite" aria-relevant="additions" id="right-rail-recommendations-list-1">
+			<!---->
+					<li class="padding-none margin-top-xs margin-bottom-none position-relative ">
+						  
+				<p class="line-clamp-3">
+					<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/tutorial-console?source=recommendations" data-bi-name="right-rail-recommendation-item-0">
+						Tutorial: Crear una aplicación de consola de C# sencilla  - Visual Studio (Windows)
+					</a>
+				</p>
+		   
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Cree una aplicación de consola de C# en Visual Studio y explore algunas características del entorno de desarrollo integrado (IDE) de Visual Studio.
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative ">
+						  
+				<p class="line-clamp-3">
+					<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/es-es/dotnet/core/tutorials/debugging-with-visual-studio?source=recommendations" data-bi-name="right-rail-recommendation-item-1">
+						Depuración de una aplicación de consola de .NET con Visual&nbsp;Studio - .NET
+					</a>
+				</p>
+		   
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Aprenda a depurar una aplicación de consola de .NET con Visual&nbsp;Studio.
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative ">
+						  
+				<p class="line-clamp-3">
+					<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/es-es/visualstudio/get-started/csharp/run-program?source=recommendations" data-bi-name="right-rail-recommendation-item-2">
+						Procedimientos para ejecutar un programa (C#) - Visual Studio (Windows)
+					</a>
+				</p>
+		   
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Comience a programar con C# en Visual&nbsp;Studio y ejecute programas desde un proyecto o archivo de código, trabaje con ensamblados, referencias, paquetes NuGet y .NET.
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative expandable">
+						  
+				<p class="line-clamp-3">
+					<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/es-es/visualstudio/ide/visual-csharp-intellisense?source=recommendations" data-bi-name="right-rail-recommendation-item-3">
+						IntelliSense para C# - Visual Studio (Windows)
+					</a>
+				</p>
+		   
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Explore las características de IntelliSense que puede usar al codificar el proyecto de C# para obtener acceso rápido a variables, comandos, funciones, palabras clave de lenguaje, etc.
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative expandable">
+						  
+				<p class="line-clamp-3">
+					<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/es-es/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio?source=recommendations" data-bi-name="right-rail-recommendation-item-4">
+						Accesos directos del teclado - Visual Studio (Windows)
+					</a>
+				</p>
+		   
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Conozca los métodos abreviados de teclado predeterminados de Visual&nbsp;Studio que le permiten acceder a diversos comandos y ventanas.
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative expandable">
+						  
+				<p class="line-clamp-3">
+					<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/es-es/dotnet/csharp/language-reference/compiler-messages/cs1519?source=recommendations" data-bi-name="right-rail-recommendation-item-5">
+						Error del compilador CS1519 - C#
+					</a>
+				</p>
+		   
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Error del compilador CS1519
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative expandable">
+						  
+				<p class="line-clamp-3">
+					<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/es-es/visualstudio/debugger/debugger-feature-tour?source=recommendations" data-bi-name="right-rail-recommendation-item-6">
+						Primer vistazo al depurador - Visual Studio (Windows)
+					</a>
+				</p>
+		   
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Empiece a depurar las aplicaciones mediante el depurador de Visual Studio y vea lo que hace el código mientras se ejecuta.
+		</p>
+	
+					</li>
+				<!---->
+					<li class="padding-none margin-top-sm margin-bottom-none position-relative expandable">
+						  
+				<p class="line-clamp-3">
+					<a class="display-block inner-focus font-weight-semibold font-size-sm has-line-height-reset stretched-link" href="https://learn.microsoft.com/es-es/dotnet/csharp/language-reference/compiler-messages/cs0122?source=recommendations" data-bi-name="right-rail-recommendation-item-7">
+						Error del compilador CS0122 - C#
+					</a>
+				</p>
+		   
+						
+		<p class="font-size-sm has-line-height-reset color-text-subtle margin-top-xxs line-clamp-3">
+			Error del compilador CS0122
+		</p>
+	
+					</li>
+				<!---->
+		</ul>
+	
+			</div>
+			<!---->
+				
+		<button type="button" aria-expanded="false" data-show-more="" class="link-button font-weight-semibold font-size-sm margin-top-sm" aria-controls="right-rail-recommendations-list-1" data-title="Mostrar 5 más" data-bi-name="show-more-btn">
+			<span class="show-more-text "><!---->Mostrar 5&nbsp;más<!----></span>
+			
+		</button>
+	
+		  <!---->
+		</article>
+	<!----></section>
+								<nav id="side-doc-outline" class="doc-outline" data-bi-name="intopic toc" role="navigation" aria-label="En este artículo">
+									<h3>En este artículo</h3>
+								</nav>
+								<section id="right-rail-qna" class="margin-top-xxs" data-bi-name="qna-link-card" hidden=""></section>
+							</div>
+						</div>
+
+				</div>
+				<!--end of div.columns -->
+
+			</section>
+			<!--end of .primary-holder -->
+
+			<!-- interactive container -->
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+			<!-- end of interactive container -->
+		</div>
+
+	</div>
+	<!--end of .mainContainer -->
+
+	<section class="border-top has-default-focus is-hidden-interactive margin-top-sm ">
+
+
+
+	<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+	<div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop">
+			<a data-mscc-ic="false" class="locale-selector-link button button-sm button-clear flex-shrink-0" href="https://learn.microsoft.com/es-es/locale?target=https%3A%2F%2Flearn.microsoft.com%2Fes-es%2Fvisualstudio%2Fget-started%2Fcsharp%2Ftutorial-debugger%3Fview%3Dvs-2019" data-bi-name="select-locale" aria-label="Selector de idioma del contenido. Actualmente está establecido en Español (España).">
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-world"></span>
+					</span>
+					<span class="local-selector-link-text">Español (España)</span></a>
+		<div class="flex-shrink-0">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger" aria-controls="theme-menu" aria-expanded="false" title="Tema" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Tema</span>
+		<span class="icon expanded-indicator" aria-hidden="true">
+			<span class="docon docon-chevron-down-light"></span>
+		</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu" role="menu">
+		<ul class="theme-selector padding-xxs" role="none">
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start" data-theme-to="light" aria-pressed="false">
+					<span class="theme-light margin-right-xxs">
+						<span class="theme-selector-icon css-variable-support border display-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span>
+Claro					</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start is-selected" data-theme-to="dark" aria-pressed="true">
+					<span class="theme-dark margin-right-xxs">
+						<span class="border theme-selector-icon css-variable-support display-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span>
+Oscuro					</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start" data-theme-to="high-contrast" aria-pressed="false">
+					<span class="theme-high-contrast margin-right-xxs">
+						<span class="border theme-selector-icon css-variable-support display-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span>
+Contraste alto					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>
+		</div>
+	</div>
+	<ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder"><button data-bi-name="manageCookies">Administrar cookies</button></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="https://learn.microsoft.com/es-es/previous-versions/" data-bi-name="archivelink">Versiones anteriores</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog" data-bi-name="bloglink">Blog</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="https://learn.microsoft.com/es-es/contribute/" data-bi-name="contributorGuide">Contribuir</a></li>
+					<li><a class="external-link-indicator" data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacidad</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="https://learn.microsoft.com/es-es/legal/termsofuse" data-bi-name="termsofuse">Términos de uso</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/" data-bi-name="trademarks">Marcas comerciales</a></li>
+		<li>© Microsoft 2023</li>
+	</ul>
+</footer>
+	</section>
+
+	<div id="action-panel" role="region" aria-label="Panel de acciones" class="action-panel has-default-focus" tabindex="-1"></div>
+
+
+</body></html>
