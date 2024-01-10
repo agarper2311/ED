@@ -1,0 +1,7 @@
+D:\Instituto\Entorno de desarrollo\UD-4\Act1\GetStartedDebugging\GetStartedDebugging\bin\Debug\GetStartedDebugging.exe.config
+D:\Instituto\Entorno de desarrollo\UD-4\Act1\GetStartedDebugging\GetStartedDebugging\bin\Debug\GetStartedDebugging.exe
+D:\Instituto\Entorno de desarrollo\UD-4\Act1\GetStartedDebugging\GetStartedDebugging\bin\Debug\GetStartedDebugging.pdb
+D:\Instituto\Entorno de desarrollo\UD-4\Act1\GetStartedDebugging\GetStartedDebugging\obj\Debug\GetStartedDebugging.csproj.AssemblyReference.cache
+D:\Instituto\Entorno de desarrollo\UD-4\Act1\GetStartedDebugging\GetStartedDebugging\obj\Debug\GetStartedDebugging.csproj.CoreCompileInputs.cache
+D:\Instituto\Entorno de desarrollo\UD-4\Act1\GetStartedDebugging\GetStartedDebugging\obj\Debug\GetStartedDebugging.exe
+D:\Instituto\Entorno de desarrollo\UD-4\Act1\GetStartedDebugging\GetStartedDebugging\obj\Debug\GetStartedDebugging.pdb
