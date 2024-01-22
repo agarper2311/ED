@@ -4,3 +4,6 @@
 
 > [!WARNING]
 > Algunos códigos pueden contener fallos
+
+>[!NOTE]
+>Gracias por leer 
