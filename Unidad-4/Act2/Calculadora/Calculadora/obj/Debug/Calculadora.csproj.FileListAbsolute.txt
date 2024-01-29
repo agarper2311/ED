@@ -1,0 +1,7 @@
+D:\Instituto\ED\Unidad-4\Act2\Calculadora\Calculadora\obj\Debug\Calculadora.csproj.AssemblyReference.cache
+D:\Instituto\ED\Unidad-4\Act2\Calculadora\Calculadora\obj\Debug\Calculadora.csproj.CoreCompileInputs.cache
+D:\Instituto\ED\Unidad-4\Act2\Calculadora\Calculadora\bin\Debug\Calculadora.exe.config
+D:\Instituto\ED\Unidad-4\Act2\Calculadora\Calculadora\bin\Debug\Calculadora.exe
+D:\Instituto\ED\Unidad-4\Act2\Calculadora\Calculadora\bin\Debug\Calculadora.pdb
+D:\Instituto\ED\Unidad-4\Act2\Calculadora\Calculadora\obj\Debug\Calculadora.exe
+D:\Instituto\ED\Unidad-4\Act2\Calculadora\Calculadora\obj\Debug\Calculadora.pdb
