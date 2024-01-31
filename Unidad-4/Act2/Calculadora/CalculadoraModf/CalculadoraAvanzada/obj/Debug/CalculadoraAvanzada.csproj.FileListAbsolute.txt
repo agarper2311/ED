@@ -1,0 +1,14 @@
+C:\Users\agarper2311\source\repos\CalculadoraAvanzada\obj\Debug\CalculadoraAvanzada.csproj.AssemblyReference.cache
+C:\Users\agarper2311\source\repos\CalculadoraAvanzada\obj\Debug\CalculadoraAvanzada.csproj.CoreCompileInputs.cache
+C:\Users\agarper2311\source\repos\CalculadoraAvanzada\bin\Debug\CalculadoraAvanzada.exe.config
+C:\Users\agarper2311\source\repos\CalculadoraAvanzada\bin\Debug\CalculadoraAvanzada.exe
+C:\Users\agarper2311\source\repos\CalculadoraAvanzada\bin\Debug\CalculadoraAvanzada.pdb
+C:\Users\agarper2311\source\repos\CalculadoraAvanzada\obj\Debug\CalculadoraAvanzada.exe
+C:\Users\agarper2311\source\repos\CalculadoraAvanzada\obj\Debug\CalculadoraAvanzada.pdb
+D:\Instituto\ED\Unidad-4\Act2\Calculadora\CalculadoraModf\CalculadoraAvanzada\bin\Debug\CalculadoraAvanzada.exe.config
+D:\Instituto\ED\Unidad-4\Act2\Calculadora\CalculadoraModf\CalculadoraAvanzada\bin\Debug\CalculadoraAvanzada.exe
+D:\Instituto\ED\Unidad-4\Act2\Calculadora\CalculadoraModf\CalculadoraAvanzada\bin\Debug\CalculadoraAvanzada.pdb
+D:\Instituto\ED\Unidad-4\Act2\Calculadora\CalculadoraModf\CalculadoraAvanzada\obj\Debug\CalculadoraAvanzada.csproj.AssemblyReference.cache
+D:\Instituto\ED\Unidad-4\Act2\Calculadora\CalculadoraModf\CalculadoraAvanzada\obj\Debug\CalculadoraAvanzada.csproj.CoreCompileInputs.cache
+D:\Instituto\ED\Unidad-4\Act2\Calculadora\CalculadoraModf\CalculadoraAvanzada\obj\Debug\CalculadoraAvanzada.exe
+D:\Instituto\ED\Unidad-4\Act2\Calculadora\CalculadoraModf\CalculadoraAvanzada\obj\Debug\CalculadoraAvanzada.pdb
