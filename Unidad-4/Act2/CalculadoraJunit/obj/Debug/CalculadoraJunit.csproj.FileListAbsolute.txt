@@ -1,0 +1,7 @@
+D:\Instituto\ED\Unidad-4\Act3\CalculadoraJunit\obj\Debug\CalculadoraJunit.csproj.AssemblyReference.cache
+D:\Instituto\ED\Unidad-4\Act3\CalculadoraJunit\obj\Debug\CalculadoraJunit.csproj.CoreCompileInputs.cache
+D:\Instituto\ED\Unidad-4\Act3\CalculadoraJunit\bin\Debug\CalculadoraJunit.exe.config
+D:\Instituto\ED\Unidad-4\Act3\CalculadoraJunit\bin\Debug\CalculadoraJunit.exe
+D:\Instituto\ED\Unidad-4\Act3\CalculadoraJunit\bin\Debug\CalculadoraJunit.pdb
+D:\Instituto\ED\Unidad-4\Act3\CalculadoraJunit\obj\Debug\CalculadoraJunit.exe
+D:\Instituto\ED\Unidad-4\Act3\CalculadoraJunit\obj\Debug\CalculadoraJunit.pdb
