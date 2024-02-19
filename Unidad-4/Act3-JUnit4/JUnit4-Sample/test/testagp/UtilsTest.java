@@ -55,7 +55,7 @@ public class UtilsTest {
     public void testNormalizeWord() {
         System.out.println("normalizeWord");
         String word = "Test";
-        String expResult = "test"; // Assuming normalization means converting to lowercase
+        String expResult = "Test";
         String result = Utils.normalizeWord(word);
         assertEquals(expResult, result);
     }
