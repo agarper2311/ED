@@ -1,0 +1,395 @@
+title:
+Act5.2
+Version:
+1.13.1
+valuesFileName:
+
+Num.Elems:
+11
+type:
+1
+stereotype:
+
+constraint:
+
+shortDescrLen:
+0
+shortDescr:
+
+bgrColor:
+128 255 128
+fgrColor:
+0 0 0
+objId:
+0
+ptul:
+52 96
+ptdr:
+142 122
+Num.Links:
+2
+link objId:
+10
+link objId:
+13
+name:
+Familia
+Num.Attrs:
+0
+Num.Opers:
+0
+type:
+1
+stereotype:
+
+constraint:
+
+shortDescrLen:
+0
+shortDescr:
+
+bgrColor:
+128 255 128
+fgrColor:
+0 0 0
+objId:
+1
+ptul:
+286 92
+ptdr:
+376 118
+Num.Links:
+2
+link objId:
+10
+link objId:
+12
+name:
+Padre
+Num.Attrs:
+0
+Num.Opers:
+0
+type:
+1
+stereotype:
+
+constraint:
+
+shortDescrLen:
+0
+shortDescr:
+
+bgrColor:
+128 255 128
+fgrColor:
+0 0 0
+objId:
+4
+ptul:
+609 158
+ptdr:
+699 184
+Num.Links:
+3
+link objId:
+7
+link objId:
+8
+link objId:
+12
+name:
+Hijo
+Num.Attrs:
+0
+Num.Opers:
+0
+type:
+1
+stereotype:
+
+constraint:
+
+shortDescrLen:
+0
+shortDescr:
+
+bgrColor:
+128 255 128
+fgrColor:
+0 0 0
+objId:
+3
+ptul:
+290 319
+ptdr:
+380 345
+Num.Links:
+2
+link objId:
+8
+link objId:
+14
+name:
+Madre
+Num.Attrs:
+0
+Num.Opers:
+0
+type:
+1
+stereotype:
+
+constraint:
+
+shortDescrLen:
+0
+shortDescr:
+
+bgrColor:
+128 255 128
+fgrColor:
+0 0 0
+objId:
+2
+ptul:
+29 315
+ptdr:
+182 378
+Num.Links:
+3
+link objId:
+7
+link objId:
+13
+link objId:
+14
+name:
+Persona
+Num.Attrs:
+2
+name:
+DNI
+type:
+
+defValue:
+
+classScope:
+0
+vis:
+1
+stereotype:
+
+constraint:
+
+shortDescrLen:
+0
+shortDescr:
+
+derived:
+0
+name:
+Nombre : String
+type:
+string
+defValue:
+
+classScope:
+0
+vis:
+1
+stereotype:
+
+constraint:
+
+shortDescrLen:
+0
+shortDescr:
+
+derived:
+0
+Num.Opers:
+0
+type:
+2
+stereotype:
+
+constraint:
+
+shortDescrLen:
+0
+shortDescr:
+
+bgrColor:
+255 255 255
+fgrColor:
+0 0 0
+objId:
+7
+Num.Pts:
+6
+654 158
+654 32
+748 32
+747 463
+105 466
+105 378
+objStartId:
+4
+objEndId:
+2
+type:
+5
+stereotype:
+
+constraint:
+
+shortDescrLen:
+0
+shortDescr:
+
+bgrColor:
+255 255 255
+fgrColor:
+0 0 0
+objId:
+10
+Num.Pts:
+4
+92 122
+94 198
+286 191
+286 111
+objStartId:
+0
+objEndId:
+1
+roleAname:
+
+roleBname:
+
+roleAmult:
+
+roleBmult:
+
+composition:
+1
+type:
+5
+stereotype:
+
+constraint:
+
+shortDescrLen:
+0
+shortDescr:
+
+bgrColor:
+255 255 255
+fgrColor:
+0 0 0
+objId:
+8
+Num.Pts:
+4
+330 319
+330 179
+375 178
+609 179
+objStartId:
+3
+objEndId:
+4
+roleAname:
+
+roleBname:
+
+roleAmult:
+
+roleBmult:
+
+composition:
+0
+type:
+5
+stereotype:
+
+constraint:
+
+shortDescrLen:
+0
+shortDescr:
+
+bgrColor:
+255 255 255
+fgrColor:
+0 0 0
+objId:
+12
+Num.Pts:
+3
+335 118
+335 172
+609 169
+objStartId:
+1
+objEndId:
+4
+roleAname:
+
+roleBname:
+
+roleAmult:
+
+roleBmult:
+
+composition:
+0
+type:
+2
+stereotype:
+
+constraint:
+
+shortDescrLen:
+0
+shortDescr:
+
+bgrColor:
+255 255 255
+fgrColor:
+0 0 0
+objId:
+13
+Num.Pts:
+2
+97 122
+105 315
+objStartId:
+0
+objEndId:
+2
+type:
+2
+stereotype:
+
+constraint:
+
+shortDescrLen:
+0
+shortDescr:
+
+bgrColor:
+255 255 255
+fgrColor:
+0 0 0
+objId:
+14
+Num.Pts:
+2
+290 332
+182 346
+objStartId:
+3
+objEndId:
+2
